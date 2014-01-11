@@ -19,6 +19,7 @@ pause
 exit
 :success
 @echo on
+call downloadall.bat
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" /v *runautoav /t REG_SZ /d "%CD%\launch-online_startup.bat"
 start uac-disable.bat
 echo Rebooting to complete UAC disable operation in 10 seconds...
