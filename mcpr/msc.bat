@@ -1,13 +1,12 @@
-net stop McNASvc
+﻿net stop McNASvc
 net stop mcpltsvc
 net stop mcbootdelaystartsvc
 net stop mcmscsvc
 net stop McTskShd.exe
 "C:\Program Files\McAfee\MSC\McAPExe" /unregserver
 net stop McOobeSv
-rundll32 msccInup.dll,StopMcAgentEXE
-rundll32 msccInup.dll,RemoveMSCDesktopShortcut
-rundll32 msccInup.dll,RemoveProductsStatus
+rundll32 mscclnup.dll,StopMcAgentEXE
+rundll32 mscclnup.dll,RemoveMSCDesktopShortcut
 rd /Q /S "%COMMONDESKTOP%\McAfee Security Center.lnk"
 rd /Q /S "%COMMONPROGRAMS%\McAfee\McAfee SecurityCenter.lnk"
 rd /Q /S "%COMMONDESKTOP%\McAfee Total Protection.lnk"
@@ -113,7 +112,7 @@ reg delete "HKCR\CLSID\{50B2FCF2-5945-4A4F-BBA2-D95EAF299B0F}" /f
 reg delete "HKCR\CLSID\{5308F17B-F67F-4A7C-A9A7-8FB22B54F29F}" /f
 reg delete "HKCR\CLSID\{577E60D7-CD21-4D65-A172-3F64917A8CF7}" /f
 reg delete "HKCR\CLSID\{59668F1F-5270-4A14-95A7-03AE7686D0FE}" /f
-reg delete "HKCR\CLSID\{5A63D47D-1BA2-48ff-9955-31207899BE01}	" /f
+reg delete "HKCR\CLSID\{5A63D47D-1BA2-48ff-9955-31207899BE01}" /f
 reg delete "HKCR\CLSID\{5A7022C6-3023-475E-AC0D-53E8B4BC626B}" /f
 reg delete "HKCR\CLSID\{5BEB0702-AD0B-4801-BE3A-49636190A050}" /f
 reg delete "HKCR\CLSID\{61B085E5-356C-4fed-BEFF-AC6BE240B548}" /f
@@ -123,7 +122,7 @@ reg delete "HKCR\CLSID\{66BB8540-EACF-4348-9121-243845EC8466}" /f
 reg delete "HKCR\CLSID\{683C7EA1-3A4B-4764-A8E6-768C4F38BBA6}" /f
 reg delete "HKCR\CLSID\{6A5A9B2E-3BD7-4c70-83F2-E664A86568F4}" /f
 reg delete "HKCR\CLSID\{6A972E27-93E2-4F98-8367-4101B2073814}" /f
-reg delete "HKCR\CLSID\{7323885B-407F-4839-9695-96F545FF6286}	" /f
+reg delete "HKCR\CLSID\{7323885B-407F-4839-9695-96F545FF6286}" /f
 reg delete "HKCR\CLSID\{7514FDEF-DBCB-4830-AA83-3F3E4A693705}" /f
 reg delete "HKCR\CLSID\{7540109C-D170-409A-9F89-79576A6AF4D2}" /f
 reg delete "HKCR\CLSID\{75C8AC66-D942-4F8E-BC09-292846DA6533}" /f
@@ -423,7 +422,7 @@ reg delete "HKCR\McNmcClient.CoMcNmcClient" /f
 reg delete "HKCR\McNmcClient.CoMcNmcClient.1" /f
 reg delete "HKCR\McNmcClient.McNmcNetMap" /f
 reg delete "HKCR\McNmcClient.McNmcNetMap.1" /f
-reg delete "HKCR\McNmcPrv.McNmcProtProvider	" /f
+reg delete "HKCR\McNmcPrv.McNmcProtProvider" /f
 reg delete "HKCR\McNmcPrv.McNmcProtProvider.1" /f
 reg delete "HKCR\McNmcSrv.McNmcController" /f
 reg delete "HKCR\McNmcSrv.McNmcController.1" /f
@@ -611,22 +610,22 @@ reg delete "HKLM\SOFTWARE\Classes\AppID\{82D96553-6CA2-495E-8918-5C0B00AC2F41}" 
 reg delete "HKLM\SOFTWARE\Classes\AppID\McNDMisp.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McNDSrv.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{145D3068-E202-4925-89C4-A1F8EB85DBA4}" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{16D2A02D-7200-4AD7-97FA-BEEE9D3AF9FC}	" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{16D2A02D-7200-4AD7-97FA-BEEE9D3AF9FC}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{39D42A18-E6FE-4D1F-996E-FEC3C437E497}" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{8A7416DE-CD6D-4708-9AC4-C8B177CFB36C}	" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{8A7416DE-CD6D-4708-9AC4-C8B177CFB36C}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{B7C80588-5111-4974-9B21-9F3EBFFF525A}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{CC180A64-A36C-4D05-9447-F6F21DA599FB}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{D4A23375-2258-4F08-93CF-4F673A1F35CB}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{E9A26315-4156-4F9F-A223-FA016E9047AF}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{EB1358E3-48FD-469E-B075-C539955E40C2}" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{F919C6AF-B0EF-4DBC-9A4F-C63F13B71E8B}	" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{F919C6AF-B0EF-4DBC-9A4F-C63F13B71E8B}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{FF0F1C05-6135-424B-8EFD-3DBCDA7063FB}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{1088F28A-ED6A-438F-B3F5-29972D2DCD7B}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{145D3068-E202-4925-89C4-A1F8EB85DBA4}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{16D2A02D-7200-4AD7-97FA-BEEE9D3AF9FC}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{39D42A18-E6FE-4D1F-996E-FEC3C437E497}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{4378D8E8-83B9-4051-A883-078734C0E522}" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5407F5EF-3F80-428F-A08C-C275B6F707A2}	" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5407F5EF-3F80-428F-A08C-C275B6F707A2}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{590D4485-64F6-4DFF-BE7D-8D60E11D0D29}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{8A7416DE-CD6D-4708-9AC4-C8B177CFB36C}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{8AB6F9EB-A356-435B-9297-CB1533436BB3}" /f
@@ -634,7 +633,7 @@ reg delete "HKLM\SOFTWARE\Classes\Interface\{C0ADBFAB-5697-4B82-9D1C-71F12AB3CBC
 reg delete "HKLM\SOFTWARE\Classes\Interface\{CDA2F8C4-9223-4F60-958B-BE518625CCCE}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{DCDEA4FC-ECFD-4F87-A1D0-C7F119729740}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{E33D7DEC-967F-4E52-A961-4DC21B6E7845}" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E9A26315-4156-4F9F-A223-FA016E9047AF}	" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E9A26315-4156-4F9F-A223-FA016E9047AF}" /f
 reg delete "HKLM\SOFTWARE\Classes\Interface\{F83D555A-7D89-48EA-9961-66AEB00820B2}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\{4E860CBE-F301-44D6-A7F6-864D72B68921}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McDspWrp.DLL" /f
@@ -694,25 +693,25 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\mcui_exe" /f
 reg delete "HKLM\SYSTEM\CurrentControlSet\Services\McOobeSv" /f
 reg delete "HKLM\SOFTWARE\Classes\AlertManager.CoMcAlertMgr" /f
 reg delete "HKLM\SOFTWARE\Classes\AlertManager.CoMcAlertMgr.1" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{1804D114-944F-4ECC-913E-F5DA809E11C2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{47EBCB69-BE76-4CAA-87F7-5F2724D07967}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{544B0818-1FFD-4aa1-8C59-2505F00A76A9}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{66AEAB5B-1AC2-4504-B28D-667C2529858F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{6AE8C410-A23A-40D4-9C26-39671B861C61}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{6D15C092-5B85-4BA6-BBEE-050E51EBAFF0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{84EE99D1-0457-4BC9-BD6C-1FBBFDD95BFA}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{A194B165-C4D7-417D-8774-A137C629BB03}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{BBC73148-5AE4-44FA-B11F-405CEDE983A0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{C67678B4-8E07-4e1f-A2E3-CD2EE9152695}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{C8A49047-AFB0-4931-9314-ABAAC93E662B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{CFE68DFE-E6A3-48FC-A16B-0AE991E23576}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{DDBEF8E2-A473-44EA-B59A-0BDF4B88A322}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{E78F9329-EDC6-44A1-8707-A7EDE0C1D3C3}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{EAC9CF69-E509-4C6E-A40D-5B907C4257A8}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{EC57D58E-0F20-4253-8C14-BD2B37BE5884}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{F6C2A0DE-7D5F-4885-91D4-45FB38364A52}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{FB670F2F-BAD7-405E-833D-D9F7F4694DA6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{FCBE0103-A5BB-4F39-9485-EE358AEDFB55}		" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{1804D114-944F-4ECC-913E-F5DA809E11C2}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{47EBCB69-BE76-4CAA-87F7-5F2724D07967}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{544B0818-1FFD-4aa1-8C59-2505F00A76A9}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{66AEAB5B-1AC2-4504-B28D-667C2529858F}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{6AE8C410-A23A-40D4-9C26-39671B861C61}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{6D15C092-5B85-4BA6-BBEE-050E51EBAFF0}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{84EE99D1-0457-4BC9-BD6C-1FBBFDD95BFA}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{A194B165-C4D7-417D-8774-A137C629BB03}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{BBC73148-5AE4-44FA-B11F-405CEDE983A0}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{C67678B4-8E07-4e1f-A2E3-CD2EE9152695}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{C8A49047-AFB0-4931-9314-ABAAC93E662B}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{CFE68DFE-E6A3-48FC-A16B-0AE991E23576}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{DDBEF8E2-A473-44EA-B59A-0BDF4B88A322}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{E78F9329-EDC6-44A1-8707-A7EDE0C1D3C3}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{EAC9CF69-E509-4C6E-A40D-5B907C4257A8}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{EC57D58E-0F20-4253-8C14-BD2B37BE5884}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{F6C2A0DE-7D5F-4885-91D4-45FB38364A52}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{FB670F2F-BAD7-405E-833D-D9F7F4694DA6}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{FCBE0103-A5BB-4F39-9485-EE358AEDFB55}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\hwapi.dll" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McDisc.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McGenSettingsCShimLayer.DLL" /f
@@ -732,203 +731,203 @@ reg delete "HKLM\SOFTWARE\Classes\AppID\MpfEvt.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\RprtShm.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\TskTCShm.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\VSCVer.DLL" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{071345B6-580F-47e5-A454-A76E9817CD8D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{0DA0C548-48F3-45D9-91A2-122C1F10570D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{112F60D8-C573-4bf2-8C70-C791B0C7DF62}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{1481A4AE-3ACD-4d49-9D7D-73891072CB4F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{8472B0B6-1510-4c08-B72F-1005782AF3D2}	" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{1EC861EB-F953-4DEC-8C5D-6169FC946492}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{209500FC-6B45-4693-8871-6296C4843751}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{211EBA3A-EA5A-496b-A021-5C6BEB365E4C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{26443C64-E109-4DFA-9AB2-84EB75D83D11}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{26608B46-476A-4bf1-9CC6-AFEA28EBBC17}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{27121453-763C-4982-ACFB-6F7B699538A7}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2A39416F-A6ED-4356-BDCA-D0F00CEC5E30}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C026D52-3200-44EF-A616-C6437A53AE45}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C5EBA2C-B54C-44B8-957D-BA18846BB39E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{331C6907-A65B-478C-8D39-EB0605D6711E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3A185DDE-E020-4985-A8F2-E27CDC4A0F3A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3E41BEFB-70ED-4C26-B18D-FCCDAD668184}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3ED11E13-AB3A-49A1-B29E-B33853F6CB4A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3EECB600-9659-4775-89C1-6A23B2AB7E53}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{4D8E7AFE-514C-40eb-BBCB-ED0806F2E47E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{4FE2B7C8-AC9D-473C-A227-528F96CF0A88}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{51E2504E-5ED7-40ab-8313-CBFB09CEF29A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{57249F09-6C95-43D5-977C-301EBAF7F3F5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{5A40054F-2EBB-41bd-8A94-38C91AAFBC43}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{5D43E01B-DE05-4C28-8C61-C5AFE803E20B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{678BABBE-FE1A-40A6-BB51-DFBF5F902E02}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{687973E2-17C5-4BEA-BE73-7C4D3A8A56F8}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6DFC2D17-579D-4c1c-93B7-B05B7DCCD766}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6EC32496-6DB6-4bfe-8B10-2258ACABDF2C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{72949A75-D662-4D49-9469-3D6B1916EF22}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{7B3BE4B3-1ACA-40A1-B056-E01874B94975}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{7DB4A165-84AF-49DB-82C9-690304ADC709}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{80AD3138-435C-499B-A71F-7F129960E6F7}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{858CCFAD-107A-4806-ACC4-68C84614EDDE}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{8CC1B846-DC09-43C0-A310-BE7EE624E51B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{913DE9B2-ACA7-44F9-AF6A-C9A9519776B3}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{9B3BEB4E-1C5E-4a5f-BB36-2F6587DD34E2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{9EBE7B1C-29B4-457A-A4FF-2883604805E0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A557A096-4DA4-4E32-B863-BAFD39EEB367}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A59840C5-B1C1-4929-837A-0C1B20B32DFB}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6BDC8D7-9EE2-49BD-B541-CCFFF84B2C10}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A800540F-2CDA-49B1-819C-328B06010284}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{AADB3E19-1DF3-41F9-BB45-9C7DCCE13082}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{AD6E7ABF-E06F-4ff6-B734-D04F22DAE042}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{B56A31B9-4C7D-4A15-9383-4F69EF85F648}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{B7D66A11-7233-4e29-A3B7-9D359344ED5B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{BC351B4B-1146-4C67-93AC-9C4B14A92C5B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{BF1A6196-0201-41FF-9024-EBDCA65A2D85}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{C4DA2502-4782-4E56-B87E-EF23283134F5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{D910B47E-CF89-4DEF-84C0-89F0B8971F7E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DA9E2DA0-54A5-48a4-B8E3-FD4623CAE606}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DD69E95D-D449-43fe-9496-85EBB56495BA}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DDC6C82A-BCD6-480f-BAE7-9F406F687A53}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{E0EC0F2B-773D-4dd7-BE6C-7D85D6AA6269}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{EA72CA73-16A0-4edc-918C-2A36C2989ABF}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{EAE4A27B-7CF9-4BE3-9B27-6B16D2BF591C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{ECCFF706-6C37-4ad2-842A-B469F8834EE1}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{F01E4065-20D6-4c86-9076-468AFB1B4156}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{F5DDF629-FAC9-4AA5-9BFF-EDA5FF8026AB}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{FC860711-DCDA-4109-9402-46DB0E1C3037}		" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{071345B6-580F-47e5-A454-A76E9817CD8D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{0DA0C548-48F3-45D9-91A2-122C1F10570D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{112F60D8-C573-4bf2-8C70-C791B0C7DF62}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{1481A4AE-3ACD-4d49-9D7D-73891072CB4F}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{8472B0B6-1510-4c08-B72F-1005782AF3D2}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{1EC861EB-F953-4DEC-8C5D-6169FC946492}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{209500FC-6B45-4693-8871-6296C4843751}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{211EBA3A-EA5A-496b-A021-5C6BEB365E4C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{26443C64-E109-4DFA-9AB2-84EB75D83D11}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{26608B46-476A-4bf1-9CC6-AFEA28EBBC17}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{27121453-763C-4982-ACFB-6F7B699538A7}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2A39416F-A6ED-4356-BDCA-D0F00CEC5E30}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C026D52-3200-44EF-A616-C6437A53AE45}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C5EBA2C-B54C-44B8-957D-BA18846BB39E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{331C6907-A65B-478C-8D39-EB0605D6711E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3A185DDE-E020-4985-A8F2-E27CDC4A0F3A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3E41BEFB-70ED-4C26-B18D-FCCDAD668184}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3ED11E13-AB3A-49A1-B29E-B33853F6CB4A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3EECB600-9659-4775-89C1-6A23B2AB7E53}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{4D8E7AFE-514C-40eb-BBCB-ED0806F2E47E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{4FE2B7C8-AC9D-473C-A227-528F96CF0A88}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{51E2504E-5ED7-40ab-8313-CBFB09CEF29A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{57249F09-6C95-43D5-977C-301EBAF7F3F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{5A40054F-2EBB-41bd-8A94-38C91AAFBC43}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{5D43E01B-DE05-4C28-8C61-C5AFE803E20B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{678BABBE-FE1A-40A6-BB51-DFBF5F902E02}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{687973E2-17C5-4BEA-BE73-7C4D3A8A56F8}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6DFC2D17-579D-4c1c-93B7-B05B7DCCD766}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6EC32496-6DB6-4bfe-8B10-2258ACABDF2C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{72949A75-D662-4D49-9469-3D6B1916EF22}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{7B3BE4B3-1ACA-40A1-B056-E01874B94975}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{7DB4A165-84AF-49DB-82C9-690304ADC709}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{80AD3138-435C-499B-A71F-7F129960E6F7}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{858CCFAD-107A-4806-ACC4-68C84614EDDE}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{8CC1B846-DC09-43C0-A310-BE7EE624E51B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{913DE9B2-ACA7-44F9-AF6A-C9A9519776B3}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{9B3BEB4E-1C5E-4a5f-BB36-2F6587DD34E2}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{9EBE7B1C-29B4-457A-A4FF-2883604805E0}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A557A096-4DA4-4E32-B863-BAFD39EEB367}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A59840C5-B1C1-4929-837A-0C1B20B32DFB}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6BDC8D7-9EE2-49BD-B541-CCFFF84B2C10}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A800540F-2CDA-49B1-819C-328B06010284}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{AADB3E19-1DF3-41F9-BB45-9C7DCCE13082}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{AD6E7ABF-E06F-4ff6-B734-D04F22DAE042}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{B56A31B9-4C7D-4A15-9383-4F69EF85F648}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{B7D66A11-7233-4e29-A3B7-9D359344ED5B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{BC351B4B-1146-4C67-93AC-9C4B14A92C5B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{BF1A6196-0201-41FF-9024-EBDCA65A2D85}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{C4DA2502-4782-4E56-B87E-EF23283134F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{D910B47E-CF89-4DEF-84C0-89F0B8971F7E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DA9E2DA0-54A5-48a4-B8E3-FD4623CAE606}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DD69E95D-D449-43fe-9496-85EBB56495BA}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DDC6C82A-BCD6-480f-BAE7-9F406F687A53}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{E0EC0F2B-773D-4dd7-BE6C-7D85D6AA6269}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{EA72CA73-16A0-4edc-918C-2A36C2989ABF}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{EAE4A27B-7CF9-4BE3-9B27-6B16D2BF591C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{ECCFF706-6C37-4ad2-842A-B469F8834EE1}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{F01E4065-20D6-4c86-9076-468AFB1B4156}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{F5DDF629-FAC9-4AA5-9BFF-EDA5FF8026AB}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{FC860711-DCDA-4109-9402-46DB0E1C3037}" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcAboutInfoCShim" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcCategories" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcInfoviz" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcSecurityCenter" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{01633BC1-790F-47C8-AD23-A432FF358D3A}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{030E889A-C4A5-4478-BE42-994C255D1FE8}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0B937F6E-CDE3-4E0A-B5D2-D4624B12EA15}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0C4FC022-C806-4833-B17B-548BDA897E7D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0DA0C548-48F3-45D9-91A2-122C1F10570D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0E9A4210-C6D2-49B3-9EA3-29FD5B68C951}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{18325A82-0733-46BF-ACDB-DD33B68DFDF0}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{18DD13D1-A66F-467C-949A-E09746F22B1D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{290B3AF1-15AD-44FE-BBFE-7DA2222E359B}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{2C026D52-3200-44EF-A616-C6437A53AE45}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{31DD3A41-54B0-4EBB-8DF3-772639D1577B}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{3614323C-B5C2-4A9E-BFB5-B3F052763F24}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{3EECB600-9659-4775-89C1-6A23B2AB7E53}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{497C6421-F889-4580-8395-99C3B4392C0D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4D94328A-9217-47A9-A19C-55E0FF76D9C9}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4FB685EC-DB20-4963-91FB-888A405A66CB}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4FEC2B25-E8EF-4EAE-AA40-8667173EDC68}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{539020EE-44F6-43C2-9140-A0A34C5D9F0E}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5444A171-D8D4-40AB-90C4-CD78A31CD696}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5832BB64-12DC-4BCF-912E-DE22091C6F1F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5DB0EA6F-FB72-4A07-A7A5-AC08158AAAEC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{60C1F9FB-D1AB-42E4-9DAC-7D30E156FE00}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6244DFE1-7A07-4C86-870C-E9FEC8704131}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6FA80FD8-C9D0-43C5-AA74-6E823C523965}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6FC8F9F3-560C-425D-9310-4706954BC795}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{7004A536-123E-4380-AACA-ED1B119676CD}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{73603B7B-8E19-48BC-B07E-306C905AA385}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{7E60A0D7-A259-41F4-BF5A-F92E5B3F0E6C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{80AD3138-435C-499B-A71F-7F129960E6F7}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{81B4207B-97EE-4CA3-B1E2-37F7C8F3A306}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{82177046-58AC-4083-B91C-EEEE00B8C636}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{8F72BF9C-108D-49C7-B79C-B4AB5F98A393}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{924865F5-9BFE-4345-9845-766C46CE20C5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{9329F5E2-EE0E-4CFA-BAC4-AC77E2018B79}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{9DA8A766-6A5B-4D59-B75F-2588677056A5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{AA47B641-7756-4246-9BD6-77790E2F84B0}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{AD4969AA-5ADE-4EA8-AA22-45743B959703}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B23D5B68-CFAD-400A-8910-B4FD24FEC9F6}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B25C8A58-2B96-45D1-B5BF-B4EF4241DA7D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B73F6964-08CD-4B47-AF20-593C32AC386C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{BFA756D7-70DF-0852-9510-4E01D310896E}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{C23B06C6-ED3E-4AB2-B159-C6B3E9BFE974}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{C4DA2502-4782-4E56-B87E-EF23283134F5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{CB1528F5-A89E-40F9-81E0-A4574DE76BE1}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D0BE9703-85E9-416C-A06E-1BBA058028EC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D3003649-3E6F-4692-83CF-782EC5EB0E4A}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D640D78D-05EA-403A-830A-6F4D7851153F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D9D93BEF-1C95-4CB3-B7B3-517CCB4503AC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E1758262-671E-41EF-A023-340F8CC018CA}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E3EDFB3B-52AA-4DBA-ACFC-44224A931090}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E92BCC3F-EF21-4C12-9F0A-891590720ECD}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{F70AEED0-8930-487A-A519-E859F7B67D9C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{F725437D-EE93-4559-91E1-849163F70923}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FC860711-DCDA-4109-9402-46DB0E1C3037}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FFD24F4D-3413-4719-98ED-BFB1DD592127}	" /f
-reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher						" /f
-reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings				" /f
-reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList								" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays								" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs							" /f
-reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl				" /f
-reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret								" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret.1								" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore							" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem					" /f
-reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsL.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsLis			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetwork.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetworkHa			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization						" /f
-reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McProxy.McSvcSubsystem								" /f
-reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings						" /f
-reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcReport.1								" /f
-reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcTaskScheduler							" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler							" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC									" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC.1									" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{0B0EE5A8-195E-422C-8135-2E70D74C6AE6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{11CBC052-B2F0-48AC-91D5-DE5EF636C72F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{16A64441-A14D-0852-9510-1E02FC7BC867}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{1D9AB7D0-3998-4118-B5D8-3EA7CDCF4F55}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{254F1B13-56E0-4208-A459-3325B5718706}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{283A59DC-ECBF-47AE-BDB3-11954FE92AA5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{46B23E97-93B7-4BCF-878D-2A93542EBA40}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{64CAF364-5F4E-4198-8D86-CA20D427FDBC}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8EDB3D31-ABF7-4991-A806-B59DBA2DF097}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8F2C49BD-90B2-4579-9905-853DB9E2F218}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{B7D66DAD-3A3D-4CFD-8E11-9A2365460202}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{CBA39935-4AAD-407D-8D12-0538E46F33E2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DD0A95CB-2ED5-43A4-8B0B-129AAA9DDAF6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DDB775AD-8CC4-4D1F-A6B4-E863D31401F9}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{ED1029B8-9E09-4B34-8068-A251FD55AB42}		" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{01633BC1-790F-47C8-AD23-A432FF358D3A}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{030E889A-C4A5-4478-BE42-994C255D1FE8}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0B937F6E-CDE3-4E0A-B5D2-D4624B12EA15}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0C4FC022-C806-4833-B17B-548BDA897E7D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0DA0C548-48F3-45D9-91A2-122C1F10570D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0E9A4210-C6D2-49B3-9EA3-29FD5B68C951}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{18325A82-0733-46BF-ACDB-DD33B68DFDF0}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{18DD13D1-A66F-467C-949A-E09746F22B1D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{290B3AF1-15AD-44FE-BBFE-7DA2222E359B}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{2C026D52-3200-44EF-A616-C6437A53AE45}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{31DD3A41-54B0-4EBB-8DF3-772639D1577B}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{3614323C-B5C2-4A9E-BFB5-B3F052763F24}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{3EECB600-9659-4775-89C1-6A23B2AB7E53}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{497C6421-F889-4580-8395-99C3B4392C0D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4D94328A-9217-47A9-A19C-55E0FF76D9C9}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4FB685EC-DB20-4963-91FB-888A405A66CB}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4FEC2B25-E8EF-4EAE-AA40-8667173EDC68}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{539020EE-44F6-43C2-9140-A0A34C5D9F0E}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5444A171-D8D4-40AB-90C4-CD78A31CD696}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5832BB64-12DC-4BCF-912E-DE22091C6F1F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5DB0EA6F-FB72-4A07-A7A5-AC08158AAAEC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{60C1F9FB-D1AB-42E4-9DAC-7D30E156FE00}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6244DFE1-7A07-4C86-870C-E9FEC8704131}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6FA80FD8-C9D0-43C5-AA74-6E823C523965}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6FC8F9F3-560C-425D-9310-4706954BC795}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{7004A536-123E-4380-AACA-ED1B119676CD}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{73603B7B-8E19-48BC-B07E-306C905AA385}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{7E60A0D7-A259-41F4-BF5A-F92E5B3F0E6C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{80AD3138-435C-499B-A71F-7F129960E6F7}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{81B4207B-97EE-4CA3-B1E2-37F7C8F3A306}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{82177046-58AC-4083-B91C-EEEE00B8C636}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{8F72BF9C-108D-49C7-B79C-B4AB5F98A393}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{924865F5-9BFE-4345-9845-766C46CE20C5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{9329F5E2-EE0E-4CFA-BAC4-AC77E2018B79}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{9DA8A766-6A5B-4D59-B75F-2588677056A5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{AA47B641-7756-4246-9BD6-77790E2F84B0}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{AD4969AA-5ADE-4EA8-AA22-45743B959703}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B23D5B68-CFAD-400A-8910-B4FD24FEC9F6}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B25C8A58-2B96-45D1-B5BF-B4EF4241DA7D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B73F6964-08CD-4B47-AF20-593C32AC386C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{BFA756D7-70DF-0852-9510-4E01D310896E}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{C23B06C6-ED3E-4AB2-B159-C6B3E9BFE974}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{C4DA2502-4782-4E56-B87E-EF23283134F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{CB1528F5-A89E-40F9-81E0-A4574DE76BE1}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D0BE9703-85E9-416C-A06E-1BBA058028EC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D3003649-3E6F-4692-83CF-782EC5EB0E4A}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D640D78D-05EA-403A-830A-6F4D7851153F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D9D93BEF-1C95-4CB3-B7B3-517CCB4503AC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E1758262-671E-41EF-A023-340F8CC018CA}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E3EDFB3B-52AA-4DBA-ACFC-44224A931090}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E92BCC3F-EF21-4C12-9F0A-891590720ECD}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{F70AEED0-8930-487A-A519-E859F7B67D9C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{F725437D-EE93-4559-91E1-849163F70923}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FC860711-DCDA-4109-9402-46DB0E1C3037}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FFD24F4D-3413-4719-98ED-BFB1DD592127}" /f
+reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher" /f
+reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings" /f
+reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs" /f
+reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl" /f
+reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem" /f
+reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsL.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsLis" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetworkHa" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization" /f
+reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McProxy.McSvcSubsystem" /f
+reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings" /f
+reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings.1" /f
+reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcReport.1" /f
+reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcTaskScheduler" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler.1" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC.1" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{0B0EE5A8-195E-422C-8135-2E70D74C6AE6}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{11CBC052-B2F0-48AC-91D5-DE5EF636C72F}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{16A64441-A14D-0852-9510-1E02FC7BC867}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{1D9AB7D0-3998-4118-B5D8-3EA7CDCF4F55}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{254F1B13-56E0-4208-A459-3325B5718706}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{283A59DC-ECBF-47AE-BDB3-11954FE92AA5}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{46B23E97-93B7-4BCF-878D-2A93542EBA40}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{64CAF364-5F4E-4198-8D86-CA20D427FDBC}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8EDB3D31-ABF7-4991-A806-B59DBA2DF097}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8F2C49BD-90B2-4579-9905-853DB9E2F218}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{B7D66DAD-3A3D-4CFD-8E11-9A2365460202}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{CBA39935-4AAD-407D-8D12-0538E46F33E2}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DD0A95CB-2ED5-43A4-8B0B-129AAA9DDAF6}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DDB775AD-8CC4-4D1F-A6B4-E863D31401F9}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{ED1029B8-9E09-4B34-8068-A251FD55AB42}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{F6F390DB-9953-497B-B2F8-9F9B7C8A1B1C}" /f
 reg delete "HKLM\SOFTWARE\Classes\TypeLib\{87400E52-0A59-4754-AE80-1E42400361BD}" /f
 reg delete "HKLM\SOFTWARE\Classes\McUnInstShim.McUninstaller" /f
@@ -1180,25 +1179,25 @@ reg delete "HKLM\SOFTWARE\Classes\Interface\{884C860E-C24E-4E3D-9A4D-77A32707C6A
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\mcui_exe" /f
 reg delete "HKLM\SOFTWARE\Classes\AlertManager.CoMcAlertMgr" /f
 reg delete "HKLM\SOFTWARE\Classes\AlertManager.CoMcAlertMgr.1" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{1804D114-944F-4ECC-913E-F5DA809E11C2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{47EBCB69-BE76-4CAA-87F7-5F2724D07967}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{544B0818-1FFD-4aa1-8C59-2505F00A76A9}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{66AEAB5B-1AC2-4504-B28D-667C2529858F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{6AE8C410-A23A-40D4-9C26-39671B861C61}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{6D15C092-5B85-4BA6-BBEE-050E51EBAFF0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{84EE99D1-0457-4BC9-BD6C-1FBBFDD95BFA}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{A194B165-C4D7-417D-8774-A137C629BB03}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{BBC73148-5AE4-44FA-B11F-405CEDE983A0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{C67678B4-8E07-4e1f-A2E3-CD2EE9152695}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{C8A49047-AFB0-4931-9314-ABAAC93E662B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{CFE68DFE-E6A3-48FC-A16B-0AE991E23576}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{DDBEF8E2-A473-44EA-B59A-0BDF4B88A322}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{E78F9329-EDC6-44A1-8707-A7EDE0C1D3C3}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{EAC9CF69-E509-4C6E-A40D-5B907C4257A8}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{EC57D58E-0F20-4253-8C14-BD2B37BE5884}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{F6C2A0DE-7D5F-4885-91D4-45FB38364A52}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{FB670F2F-BAD7-405E-833D-D9F7F4694DA6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\AppID\{FCBE0103-A5BB-4F39-9485-EE358AEDFB55}		" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{1804D114-944F-4ECC-913E-F5DA809E11C2}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{47EBCB69-BE76-4CAA-87F7-5F2724D07967}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{544B0818-1FFD-4aa1-8C59-2505F00A76A9}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{66AEAB5B-1AC2-4504-B28D-667C2529858F}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{6AE8C410-A23A-40D4-9C26-39671B861C61}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{6D15C092-5B85-4BA6-BBEE-050E51EBAFF0}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{84EE99D1-0457-4BC9-BD6C-1FBBFDD95BFA}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{A194B165-C4D7-417D-8774-A137C629BB03}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{BBC73148-5AE4-44FA-B11F-405CEDE983A0}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{C67678B4-8E07-4e1f-A2E3-CD2EE9152695}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{C8A49047-AFB0-4931-9314-ABAAC93E662B}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{CFE68DFE-E6A3-48FC-A16B-0AE991E23576}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{DDBEF8E2-A473-44EA-B59A-0BDF4B88A322}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{E78F9329-EDC6-44A1-8707-A7EDE0C1D3C3}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{EAC9CF69-E509-4C6E-A40D-5B907C4257A8}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{EC57D58E-0F20-4253-8C14-BD2B37BE5884}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{F6C2A0DE-7D5F-4885-91D4-45FB38364A52}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{FB670F2F-BAD7-405E-833D-D9F7F4694DA6}" /f
+reg delete "HKLM\SOFTWARE\Classes\AppID\{FCBE0103-A5BB-4F39-9485-EE358AEDFB55}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\hwapi.dll" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McDisc.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\McGenSettingsCShimLayer.DLL" /f
@@ -1218,203 +1217,203 @@ reg delete "HKLM\SOFTWARE\Classes\AppID\MpfEvt.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\RprtShm.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\TskTCShm.DLL" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\VSCVer.DLL" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{071345B6-580F-47e5-A454-A76E9817CD8D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{0DA0C548-48F3-45D9-91A2-122C1F10570D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{112F60D8-C573-4bf2-8C70-C791B0C7DF62}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{1481A4AE-3ACD-4d49-9D7D-73891072CB4F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{8472B0B6-1510-4c08-B72F-1005782AF3D2}	" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{1EC861EB-F953-4DEC-8C5D-6169FC946492}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{209500FC-6B45-4693-8871-6296C4843751}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{211EBA3A-EA5A-496b-A021-5C6BEB365E4C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{26443C64-E109-4DFA-9AB2-84EB75D83D11}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{26608B46-476A-4bf1-9CC6-AFEA28EBBC17}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{27121453-763C-4982-ACFB-6F7B699538A7}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2A39416F-A6ED-4356-BDCA-D0F00CEC5E30}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C026D52-3200-44EF-A616-C6437A53AE45}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C5EBA2C-B54C-44B8-957D-BA18846BB39E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{331C6907-A65B-478C-8D39-EB0605D6711E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3A185DDE-E020-4985-A8F2-E27CDC4A0F3A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3E41BEFB-70ED-4C26-B18D-FCCDAD668184}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3ED11E13-AB3A-49A1-B29E-B33853F6CB4A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{3EECB600-9659-4775-89C1-6A23B2AB7E53}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{4D8E7AFE-514C-40eb-BBCB-ED0806F2E47E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{4FE2B7C8-AC9D-473C-A227-528F96CF0A88}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{51E2504E-5ED7-40ab-8313-CBFB09CEF29A}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{57249F09-6C95-43D5-977C-301EBAF7F3F5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{5A40054F-2EBB-41bd-8A94-38C91AAFBC43}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{5D43E01B-DE05-4C28-8C61-C5AFE803E20B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{678BABBE-FE1A-40A6-BB51-DFBF5F902E02}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{687973E2-17C5-4BEA-BE73-7C4D3A8A56F8}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6DFC2D17-579D-4c1c-93B7-B05B7DCCD766}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{6EC32496-6DB6-4bfe-8B10-2258ACABDF2C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{72949A75-D662-4D49-9469-3D6B1916EF22}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{7B3BE4B3-1ACA-40A1-B056-E01874B94975}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{7DB4A165-84AF-49DB-82C9-690304ADC709}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{80AD3138-435C-499B-A71F-7F129960E6F7}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{858CCFAD-107A-4806-ACC4-68C84614EDDE}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{8CC1B846-DC09-43C0-A310-BE7EE624E51B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{913DE9B2-ACA7-44F9-AF6A-C9A9519776B3}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{9B3BEB4E-1C5E-4a5f-BB36-2F6587DD34E2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{9EBE7B1C-29B4-457A-A4FF-2883604805E0}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A557A096-4DA4-4E32-B863-BAFD39EEB367}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A59840C5-B1C1-4929-837A-0C1B20B32DFB}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6BDC8D7-9EE2-49BD-B541-CCFFF84B2C10}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{A800540F-2CDA-49B1-819C-328B06010284}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{AADB3E19-1DF3-41F9-BB45-9C7DCCE13082}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{AD6E7ABF-E06F-4ff6-B734-D04F22DAE042}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{B56A31B9-4C7D-4A15-9383-4F69EF85F648}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{B7D66A11-7233-4e29-A3B7-9D359344ED5B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{BC351B4B-1146-4C67-93AC-9C4B14A92C5B}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{BF1A6196-0201-41FF-9024-EBDCA65A2D85}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{C4DA2502-4782-4E56-B87E-EF23283134F5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{D910B47E-CF89-4DEF-84C0-89F0B8971F7E}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DA9E2DA0-54A5-48a4-B8E3-FD4623CAE606}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DD69E95D-D449-43fe-9496-85EBB56495BA}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{DDC6C82A-BCD6-480f-BAE7-9F406F687A53}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{E0EC0F2B-773D-4dd7-BE6C-7D85D6AA6269}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{EA72CA73-16A0-4edc-918C-2A36C2989ABF}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{EAE4A27B-7CF9-4BE3-9B27-6B16D2BF591C}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{ECCFF706-6C37-4ad2-842A-B469F8834EE1}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{F01E4065-20D6-4c86-9076-468AFB1B4156}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{F5DDF629-FAC9-4AA5-9BFF-EDA5FF8026AB}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}		" /f
-reg delete "HKLM\SOFTWARE\Classes\CLSID\{FC860711-DCDA-4109-9402-46DB0E1C3037}		" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{071345B6-580F-47e5-A454-A76E9817CD8D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{0DA0C548-48F3-45D9-91A2-122C1F10570D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{112F60D8-C573-4bf2-8C70-C791B0C7DF62}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{1481A4AE-3ACD-4d49-9D7D-73891072CB4F}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{8472B0B6-1510-4c08-B72F-1005782AF3D2}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{1EC861EB-F953-4DEC-8C5D-6169FC946492}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{209500FC-6B45-4693-8871-6296C4843751}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{211EBA3A-EA5A-496b-A021-5C6BEB365E4C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{26443C64-E109-4DFA-9AB2-84EB75D83D11}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{26608B46-476A-4bf1-9CC6-AFEA28EBBC17}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{27121453-763C-4982-ACFB-6F7B699538A7}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2A39416F-A6ED-4356-BDCA-D0F00CEC5E30}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C026D52-3200-44EF-A616-C6437A53AE45}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{2C5EBA2C-B54C-44B8-957D-BA18846BB39E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{331C6907-A65B-478C-8D39-EB0605D6711E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3A185DDE-E020-4985-A8F2-E27CDC4A0F3A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3E41BEFB-70ED-4C26-B18D-FCCDAD668184}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3ED11E13-AB3A-49A1-B29E-B33853F6CB4A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{3EECB600-9659-4775-89C1-6A23B2AB7E53}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{4D8E7AFE-514C-40eb-BBCB-ED0806F2E47E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{4FE2B7C8-AC9D-473C-A227-528F96CF0A88}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{51E2504E-5ED7-40ab-8313-CBFB09CEF29A}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{57249F09-6C95-43D5-977C-301EBAF7F3F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{5A40054F-2EBB-41bd-8A94-38C91AAFBC43}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{5D43E01B-DE05-4C28-8C61-C5AFE803E20B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{678BABBE-FE1A-40A6-BB51-DFBF5F902E02}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{687973E2-17C5-4BEA-BE73-7C4D3A8A56F8}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6DFC2D17-579D-4c1c-93B7-B05B7DCCD766}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{6EC32496-6DB6-4bfe-8B10-2258ACABDF2C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{72949A75-D662-4D49-9469-3D6B1916EF22}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{7B3BE4B3-1ACA-40A1-B056-E01874B94975}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{7DB4A165-84AF-49DB-82C9-690304ADC709}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{80AD3138-435C-499B-A71F-7F129960E6F7}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{858CCFAD-107A-4806-ACC4-68C84614EDDE}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{8CC1B846-DC09-43C0-A310-BE7EE624E51B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{913DE9B2-ACA7-44F9-AF6A-C9A9519776B3}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{9B3BEB4E-1C5E-4a5f-BB36-2F6587DD34E2}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{9EBE7B1C-29B4-457A-A4FF-2883604805E0}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A557A096-4DA4-4E32-B863-BAFD39EEB367}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A59840C5-B1C1-4929-837A-0C1B20B32DFB}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6BDC8D7-9EE2-49BD-B541-CCFFF84B2C10}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{A800540F-2CDA-49B1-819C-328B06010284}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{AADB3E19-1DF3-41F9-BB45-9C7DCCE13082}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{AD6E7ABF-E06F-4ff6-B734-D04F22DAE042}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{B56A31B9-4C7D-4A15-9383-4F69EF85F648}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{B7D66A11-7233-4e29-A3B7-9D359344ED5B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{BC351B4B-1146-4C67-93AC-9C4B14A92C5B}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{BF1A6196-0201-41FF-9024-EBDCA65A2D85}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{C4DA2502-4782-4E56-B87E-EF23283134F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{D910B47E-CF89-4DEF-84C0-89F0B8971F7E}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DA9E2DA0-54A5-48a4-B8E3-FD4623CAE606}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DD69E95D-D449-43fe-9496-85EBB56495BA}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{DDC6C82A-BCD6-480f-BAE7-9F406F687A53}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{E0EC0F2B-773D-4dd7-BE6C-7D85D6AA6269}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{EA72CA73-16A0-4edc-918C-2A36C2989ABF}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{EAE4A27B-7CF9-4BE3-9B27-6B16D2BF591C}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{ECCFF706-6C37-4ad2-842A-B469F8834EE1}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{F01E4065-20D6-4c86-9076-468AFB1B4156}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{F5DDF629-FAC9-4AA5-9BFF-EDA5FF8026AB}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}" /f
+reg delete "HKLM\SOFTWARE\Classes\CLSID\{FC860711-DCDA-4109-9402-46DB0E1C3037}" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcAboutInfoCShim" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcCategories" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcInfoviz" /f
 reg delete "HKLM\SOFTWARE\Classes\CoMcSecurityCenter" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{01633BC1-790F-47C8-AD23-A432FF358D3A}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{030E889A-C4A5-4478-BE42-994C255D1FE8}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0B937F6E-CDE3-4E0A-B5D2-D4624B12EA15}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0C4FC022-C806-4833-B17B-548BDA897E7D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0DA0C548-48F3-45D9-91A2-122C1F10570D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{0E9A4210-C6D2-49B3-9EA3-29FD5B68C951}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{18325A82-0733-46BF-ACDB-DD33B68DFDF0}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{18DD13D1-A66F-467C-949A-E09746F22B1D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{290B3AF1-15AD-44FE-BBFE-7DA2222E359B}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{2C026D52-3200-44EF-A616-C6437A53AE45}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{31DD3A41-54B0-4EBB-8DF3-772639D1577B}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{3614323C-B5C2-4A9E-BFB5-B3F052763F24}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{3EECB600-9659-4775-89C1-6A23B2AB7E53}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{497C6421-F889-4580-8395-99C3B4392C0D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4D94328A-9217-47A9-A19C-55E0FF76D9C9}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4FB685EC-DB20-4963-91FB-888A405A66CB}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{4FEC2B25-E8EF-4EAE-AA40-8667173EDC68}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{539020EE-44F6-43C2-9140-A0A34C5D9F0E}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5444A171-D8D4-40AB-90C4-CD78A31CD696}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5832BB64-12DC-4BCF-912E-DE22091C6F1F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{5DB0EA6F-FB72-4A07-A7A5-AC08158AAAEC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{60C1F9FB-D1AB-42E4-9DAC-7D30E156FE00}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6244DFE1-7A07-4C86-870C-E9FEC8704131}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6FA80FD8-C9D0-43C5-AA74-6E823C523965}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{6FC8F9F3-560C-425D-9310-4706954BC795}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{7004A536-123E-4380-AACA-ED1B119676CD}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{73603B7B-8E19-48BC-B07E-306C905AA385}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{7E60A0D7-A259-41F4-BF5A-F92E5B3F0E6C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{80AD3138-435C-499B-A71F-7F129960E6F7}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{81B4207B-97EE-4CA3-B1E2-37F7C8F3A306}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{82177046-58AC-4083-B91C-EEEE00B8C636}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{8F72BF9C-108D-49C7-B79C-B4AB5F98A393}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{924865F5-9BFE-4345-9845-766C46CE20C5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{9329F5E2-EE0E-4CFA-BAC4-AC77E2018B79}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{9DA8A766-6A5B-4D59-B75F-2588677056A5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{AA47B641-7756-4246-9BD6-77790E2F84B0}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{AD4969AA-5ADE-4EA8-AA22-45743B959703}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B23D5B68-CFAD-400A-8910-B4FD24FEC9F6}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B25C8A58-2B96-45D1-B5BF-B4EF4241DA7D}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{B73F6964-08CD-4B47-AF20-593C32AC386C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{BFA756D7-70DF-0852-9510-4E01D310896E}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{C23B06C6-ED3E-4AB2-B159-C6B3E9BFE974}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{C4DA2502-4782-4E56-B87E-EF23283134F5}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{CB1528F5-A89E-40F9-81E0-A4574DE76BE1}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D0BE9703-85E9-416C-A06E-1BBA058028EC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D3003649-3E6F-4692-83CF-782EC5EB0E4A}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D640D78D-05EA-403A-830A-6F4D7851153F}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{D9D93BEF-1C95-4CB3-B7B3-517CCB4503AC}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E1758262-671E-41EF-A023-340F8CC018CA}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E3EDFB3B-52AA-4DBA-ACFC-44224A931090}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{E92BCC3F-EF21-4C12-9F0A-891590720ECD}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{F70AEED0-8930-487A-A519-E859F7B67D9C}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{F725437D-EE93-4559-91E1-849163F70923}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FC860711-DCDA-4109-9402-46DB0E1C3037}	" /f
-reg delete "HKLM\SOFTWARE\Classes\Interface\{FFD24F4D-3413-4719-98ED-BFB1DD592127}	" /f
-reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher						" /f
-reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings				" /f
-reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList								" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays								" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode.1							" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem					" /f
-reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs							" /f
-reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl				" /f
-reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret								" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret.1								" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore							" /f
-reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem					" /f
-reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsL.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsLis			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetwork.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetworkHa			" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl.1				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener				" /f
-reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener.1			" /f
-reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization						" /f
-reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\McProxy.McSvcSubsystem								" /f
-reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings						" /f
-reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings.1					" /f
-reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcReport.1								" /f
-reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcTaskScheduler							" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler							" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler.1						" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC									" /f
-reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC.1									" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{0B0EE5A8-195E-422C-8135-2E70D74C6AE6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{11CBC052-B2F0-48AC-91D5-DE5EF636C72F}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{16A64441-A14D-0852-9510-1E02FC7BC867}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{1D9AB7D0-3998-4118-B5D8-3EA7CDCF4F55}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{254F1B13-56E0-4208-A459-3325B5718706}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{283A59DC-ECBF-47AE-BDB3-11954FE92AA5}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{46B23E97-93B7-4BCF-878D-2A93542EBA40}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{64CAF364-5F4E-4198-8D86-CA20D427FDBC}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8EDB3D31-ABF7-4991-A806-B59DBA2DF097}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8F2C49BD-90B2-4579-9905-853DB9E2F218}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{B7D66DAD-3A3D-4CFD-8E11-9A2365460202}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{CBA39935-4AAD-407D-8D12-0538E46F33E2}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DD0A95CB-2ED5-43A4-8B0B-129AAA9DDAF6}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DDB775AD-8CC4-4D1F-A6B4-E863D31401F9}		" /f
-reg delete "HKLM\SOFTWARE\Classes\TypeLib\{ED1029B8-9E09-4B34-8068-A251FD55AB42}		" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{01633BC1-790F-47C8-AD23-A432FF358D3A}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{030E889A-C4A5-4478-BE42-994C255D1FE8}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0B937F6E-CDE3-4E0A-B5D2-D4624B12EA15}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0C4FC022-C806-4833-B17B-548BDA897E7D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0DA0C548-48F3-45D9-91A2-122C1F10570D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{0E9A4210-C6D2-49B3-9EA3-29FD5B68C951}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{14B3FCF2-F3FD-4F93-A8ED-5ED59BF77C8F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{18325A82-0733-46BF-ACDB-DD33B68DFDF0}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{18DD13D1-A66F-467C-949A-E09746F22B1D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{290B3AF1-15AD-44FE-BBFE-7DA2222E359B}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{2C026D52-3200-44EF-A616-C6437A53AE45}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{31DD3A41-54B0-4EBB-8DF3-772639D1577B}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{3614323C-B5C2-4A9E-BFB5-B3F052763F24}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{3EECB600-9659-4775-89C1-6A23B2AB7E53}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{497C6421-F889-4580-8395-99C3B4392C0D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4D94328A-9217-47A9-A19C-55E0FF76D9C9}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4FB685EC-DB20-4963-91FB-888A405A66CB}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{4FEC2B25-E8EF-4EAE-AA40-8667173EDC68}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{539020EE-44F6-43C2-9140-A0A34C5D9F0E}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5444A171-D8D4-40AB-90C4-CD78A31CD696}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5832BB64-12DC-4BCF-912E-DE22091C6F1F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{5DB0EA6F-FB72-4A07-A7A5-AC08158AAAEC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{60C1F9FB-D1AB-42E4-9DAC-7D30E156FE00}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6244DFE1-7A07-4C86-870C-E9FEC8704131}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6AAAF860-AF3F-4E35-991D-AE04D42A516D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6FA80FD8-C9D0-43C5-AA74-6E823C523965}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{6FC8F9F3-560C-425D-9310-4706954BC795}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{7004A536-123E-4380-AACA-ED1B119676CD}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{73603B7B-8E19-48BC-B07E-306C905AA385}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{7E60A0D7-A259-41F4-BF5A-F92E5B3F0E6C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{80AD3138-435C-499B-A71F-7F129960E6F7}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{81B4207B-97EE-4CA3-B1E2-37F7C8F3A306}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{82177046-58AC-4083-B91C-EEEE00B8C636}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{8F72BF9C-108D-49C7-B79C-B4AB5F98A393}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{924865F5-9BFE-4345-9845-766C46CE20C5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{9329F5E2-EE0E-4CFA-BAC4-AC77E2018B79}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{9DA8A766-6A5B-4D59-B75F-2588677056A5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{A6DC2A06-53C5-48EA-A4A5-5D6D8F62807C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{AA47B641-7756-4246-9BD6-77790E2F84B0}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{AD4969AA-5ADE-4EA8-AA22-45743B959703}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B23D5B68-CFAD-400A-8910-B4FD24FEC9F6}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B25C8A58-2B96-45D1-B5BF-B4EF4241DA7D}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{B73F6964-08CD-4B47-AF20-593C32AC386C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{BFA756D7-70DF-0852-9510-4E01D310896E}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{C23B06C6-ED3E-4AB2-B159-C6B3E9BFE974}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{C4DA2502-4782-4E56-B87E-EF23283134F5}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{CB1528F5-A89E-40F9-81E0-A4574DE76BE1}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D0BE9703-85E9-416C-A06E-1BBA058028EC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D3003649-3E6F-4692-83CF-782EC5EB0E4A}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D640D78D-05EA-403A-830A-6F4D7851153F}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{D9D93BEF-1C95-4CB3-B7B3-517CCB4503AC}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E1758262-671E-41EF-A023-340F8CC018CA}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E3EDFB3B-52AA-4DBA-ACFC-44224A931090}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{E92BCC3F-EF21-4C12-9F0A-891590720ECD}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{F70AEED0-8930-487A-A519-E859F7B67D9C}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{F725437D-EE93-4559-91E1-849163F70923}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FA22C6D8-2B08-497E-A166-2F0B3FCB7491}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FC860711-DCDA-4109-9402-46DB0E1C3037}" /f
+reg delete "HKLM\SOFTWARE\Classes\Interface\{FFD24F4D-3413-4719-98ED-BFB1DD592127}" /f
+reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher" /f
+reg delete "HKLM\SOFTWARE\Classes\McAlertHst.CoMcHnAlertLauncher.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings" /f
+reg delete "HKLM\SOFTWARE\Classes\McGenSettingsCShimLayer.McGensettings.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimDynamicAttribute.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimHomeNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimList.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimMays.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkManager.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNetworkMonitor.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcNode.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimNmcTrustManager.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem" /f
+reg delete "HKLM\SOFTWARE\Classes\McHNShim.CoMcShimProtectionProblem.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs" /f
+reg delete "HKLM\SOFTWARE\Classes\McLogShim.McHistoryAndLogs.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl" /f
+reg delete "HKLM\SOFTWARE\Classes\McMnmAltPlugin.CoMcMnmAltPluginImpl.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecret.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore" /f
+reg delete "HKLM\SOFTWARE\Classes\McNASvc.McNodeSecretStore.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem" /f
+reg delete "HKLM\SOFTWARE\Classes\McNaSvcSubsystem.McSvcSubsystem.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscController.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsL.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryEventsLis" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetwork.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNetworkDiscovery.McDiscoveryNetworkHa" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcAltPlugin.CoMcNmcAltPluginImpl.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener" /f
+reg delete "HKLM\SOFTWARE\Classes\McNmcSrv.McNmcDiscoveryEventsListener.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization" /f
+reg delete "HKLM\SOFTWARE\Classes\McPersShm.McPersonalization.1" /f
+reg delete "HKLM\SOFTWARE\Classes\McProxy.McSvcSubsystem" /f
+reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings" /f
+reg delete "HKLM\SOFTWARE\Classes\McUpdateShim.McUpdateSettings.1" /f
+reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcReport.1" /f
+reg delete "HKLM\SOFTWARE\Classes\RprtShm.CoMcTaskScheduler" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTaskScheduler.1" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC" /f
+reg delete "HKLM\SOFTWARE\Classes\TskTCShm.CoMcTOC.1" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{0B0EE5A8-195E-422C-8135-2E70D74C6AE6}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{11CBC052-B2F0-48AC-91D5-DE5EF636C72F}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{16A64441-A14D-0852-9510-1E02FC7BC867}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{1D9AB7D0-3998-4118-B5D8-3EA7CDCF4F55}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{254F1B13-56E0-4208-A459-3325B5718706}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{283A59DC-ECBF-47AE-BDB3-11954FE92AA5}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{46B23E97-93B7-4BCF-878D-2A93542EBA40}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{64CAF364-5F4E-4198-8D86-CA20D427FDBC}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8EDB3D31-ABF7-4991-A806-B59DBA2DF097}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{8F2C49BD-90B2-4579-9905-853DB9E2F218}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{B7D66DAD-3A3D-4CFD-8E11-9A2365460202}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{CBA39935-4AAD-407D-8D12-0538E46F33E2}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DD0A95CB-2ED5-43A4-8B0B-129AAA9DDAF6}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{DDB775AD-8CC4-4D1F-A6B4-E863D31401F9}" /f
+reg delete "HKLM\SOFTWARE\Classes\TypeLib\{ED1029B8-9E09-4B34-8068-A251FD55AB42}" /f
 reg delete "HKLM\SOFTWARE\Classes\CLSID\{F6F390DB-9953-497B-B2F8-9F9B7C8A1B1C}" /f
 reg delete "HKLM\SOFTWARE\Classes\TypeLib\{87400E52-0A59-4754-AE80-1E42400361BD}" /f
 reg delete "HKLM\SOFTWARE\Classes\McUnInstShim.McUninstaller" /f
@@ -1818,25 +1817,25 @@ rd /Q /S "%PROGRAMFILES%\McAfee"
 rd /Q /S "%PROGRAMFILESCOMMON%\McAfee"
 rd /Q /S "%ProgramW6432%\McAfee"
 rd /Q /S "%PROGRAMFILES%\McAfee.com"
-reg delete "HKLM\Software\Classes\CLSID\{BB3CEFCA-6E78-4bd6-9582-047A8F377767}"
+reg delete "HKLM\Software\Classes\CLSID\{BB3CEFCA-6E78-4bd6-9582-047A8F377767}" /f
 del /F /Q "%WINDIR%\system32\config\systemprofile\Cookies\system@mcafee*.txt"
 del /F /Q "%WINDIR%\system32\config\systemprofile\appdata\roaming\microsoft\windows\cookies\system@mcafee*.txt"
 del /F /Q "%WINDIR%\sysnative\config\systemprofile\appdata\roaming\microsoft\windows\cookies\system@mcafee*.txt"
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\McAfee.com"
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\McAfee.com" /f
 del /F /Q "%WINDIR%\system32\mcgdmgr.dll"
 unlocker "%WINDIR%\system32\mcgdmgr.dll" /D /S
 del /F /Q "%WINDIR%\system32\mcinsctl.dll"
 unlocker "%WINDIR%\system32\mcinsctl.dll" /D /S
-rd /Q /S "%ALLUSERS%\Application Data\McAfee.com\"
-rd /Q /S "%ALLUSERS%\Datos de programa\McAfee.com\"
-rd /Q /S "%ALLUSERS%\Anwendungsdaten\McAfee.com\"
-rd /Q /S "%ALLUSERS%\Dati applicazioni\McAfee.com\"
-rd /Q /S "%ALLUSERS%\Dados de aplicativos\McAfee.com\"
-rd /Q /S "%ALLUSERS%\Start Menu\Programs\McAfee\"
-rd /Q /S "%ALLUSERS%\Menu Démarrer\Programmes\McAfee\"
-rd /Q /S "%ALLUSERS%\Menú Inicio\Programas\McAfee\"
-rd /Q /S "%ALLUSERS%\Startmenü\Programme\McAfee\"
-rd /Q /S "%ALLUSERS%\Menu Avvio\Programmi\McAfee\"
-rd /Q /S "%ALLUSERS%\Menu Iniciar\Programas\McAfee\"
-rd /Q /S "%ALLUSERS%\Menu Start\Programma's\McAfee\"
+rd /Q /S "%ALLUSERS%\Application Data\McAfee.com"
+rd /Q /S "%ALLUSERS%\Datos de programa\McAfee.com"
+rd /Q /S "%ALLUSERS%\Anwendungsdaten\McAfee.com"
+rd /Q /S "%ALLUSERS%\Dati applicazioni\McAfee.com"
+rd /Q /S "%ALLUSERS%\Dados de aplicativos\McAfee.com"
+rd /Q /S "%ALLUSERS%\Start Menu\Programs\McAfee"
+rd /Q /S "%ALLUSERS%\Menu Démarrer\Programmes\McAfee"
+rd /Q /S "%ALLUSERS%\Menú Inicio\Programas\McAfee"
+rd /Q /S "%ALLUSERS%\Startmenü\Programme\McAfee"
+rd /Q /S "%ALLUSERS%\Menu Avvio\Programmi\McAfee"
+rd /Q /S "%ALLUSERS%\Menu Iniciar\Programas\McAfee"
+rd /Q /S "%ALLUSERS%\Menu Start\Programma's\McAfee"
 rd /Q /S "%ALLUSERS%\Desktop\McAfee SecurityCenter.lnk"

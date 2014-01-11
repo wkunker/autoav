@@ -1,3 +1,4 @@
+set orig=%CD%
 "%PROGRAMFILES%\McAfee\SpamKiller\MskDetct.exe" /uninstall
 net stop "McAfee SpamKiller Server"
 net stop "MSK80Service"
@@ -552,7 +553,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\TypeLib\{FD5B679D-DBCE-42AB-AF5D
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Exchange\Client\Extensions\McAfee SpamKiller" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Exchange\Client\Extensions\McAfee SpamKiller Exchange Extension" /f
 reg delete "HKEY_CLASSES_ROOT\Interface\{6E13EAE8-FC21-45DE-901B-AA1A53A5F795}" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{6E13EAE8-FC21-45DE-901B-AA1A53A5F795}\IMskClient\" /f
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{6E13EAE8-FC21-45DE-901B-AA1A53A5F795}\IMskClient" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps\MSKClnt.exe" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps\MSKdetct.exe" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps\MSKSrvr.exe" /f
@@ -777,24 +778,24 @@ reg delete "HKLM\SOFTWARE\McAfee\MSK\Modules" /f
 reg delete "HKLM\SOFTWARE\McAfee\MSK\Modules" /f
 reg delete "HKLM\SOFTWARE\McAfee\McProxy\Plugins" /f
 reg delete "HKLM\SOFTWARE\McAfee\SharedModules\c:%progra~1%common~1%mcafee%instal~1%mcinst.exe" /f
-reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\CORE\" /f
-reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\FWDriver\" /f
-reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\HWAPI\" /f
-reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\McProxy\" /f
-reg delete "HKLM\SOFTWARE\McAfee.com\SpamKiller\" /f
-reg delete "HKLM\SOFTWARE\McAfee.com\SpamKiller\" /f
+reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\CORE" /f
+reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\FWDriver" /f
+reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\HWAPI" /f
+reg delete "HKLM\SOFTWARE\McAfee\SharedPackages\McProxy" /f
+reg delete "HKLM\SOFTWARE\McAfee.com\SpamKiller" /f
+reg delete "HKLM\SOFTWARE\McAfee.com\SpamKiller" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\{074A2810-2D22-493e-8BD5-3CF8FE918E67}" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\{ECEC282B-90B3-4c94-A3EA-70D053103AC3}" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Enum\Root\LEGACY_MSK80SERVICE\0000\" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Enum\Root\LEGACY_MSK80SERVICE\0000" /f
 reg delete "HKLM\SYSTEM\ControlSet001\Enum\Root\LEGACY_MSK80SERVICE\0000\Control" /f
 reg delete "HKLM\SYSTEM\ControlSet001\Enum\Root\LEGACY_MSK80SERVICE\0000\Control" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
-reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
+reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service" /f
 reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\Enum" /f
 reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\Enum" /f
 reg delete "HKLM\SYSTEM\ControlSet001\Services\MSK80Service\Enum" /f
@@ -1169,3 +1170,4 @@ reg delete "HKLM\SOFTWARE\Classes\Interface\{58321298-A450-42B5-B0D0-747B3B6C872
 reg delete "HKCR\TypeLib\{5AA5FD3A-F7C3-43DF-B926-6EFF4AFBC95C}" /f
 reg delete "HKLM\SOFTWARE\Classes\TypeLib\{5AA5FD3A-F7C3-43DF-B926-6EFF4AFBC95C}" /f
 reg delete "HKEY_CURRENT_USER\Software\McAfee\MSK" /f
+cd %orig%

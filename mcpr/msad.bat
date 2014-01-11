@@ -25,7 +25,7 @@ reg delete "HKCR\PROTOCOLS\Handler\siteadvisor" /f
 reg delete "HKCR\TypeLib\{1F7484A8-FC0A-4ADE-BD19-B764A5DF62E0}" /f
 reg delete "HKCR\TypeLib\{793C5ABC-37F0-4FE0-AFC5-FE2BB2AC17DD}" /f
 reg delete "HKCU\Software\Mozilla\Firefox\Extensions\{1650a312-02bc-40ee-977e-83f158701739}" /f
-reg delete "HKCU\Software\SiteAdvisor\" /f
+reg delete "HKCU\Software\SiteAdvisor" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\{40FE6D1A-634D-423c-8E70-957759200CBF}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\{DC78AF71-7EEF-4FB7-B15E-769CB5053CC9}" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\saPlugin.DLL" /f

@@ -69,7 +69,7 @@ reg delete "HKEY_CLASSES_ROOT\Interface\{EB8C9820-649E-4FF9-8F60-1B27CDBB1D33}" 
 reg delete "HKEY_CLASSES_ROOT\Interface\{749B9EF2-33B3-47F0-A3B4-85FEDEB0235D}" /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\McAfee\MHN" /f
 reg delete "HKLM\Software\McAfee\MHN" /f
-reg delete "HKLM\Software\McAfee\MSC\Settings\ApplicationInfo\MHN"
+reg delete "HKLM\Software\McAfee\MSC\Settings\ApplicationInfo\MHN" /f
 del /F /Q "%PROGRAMFILES%\McAfee\MHN\McENCoR.dll"
 del /F /Q "%PROGRAMFILES%\McAfee\MHN\McENLoR.dll"
 del /F /Q "%PROGRAMFILES%\McAfee\MHN\McENRes.dll"

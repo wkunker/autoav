@@ -1,4 +1,4 @@
-rundll32 SdOASMon.dll,SdOASMon "shutdown OAS and SystemGuard"
+rem rundll32 SdOASMon.dll,SdOASMon shutdown OAS and SystemGuard
 regedit /s "lockdown.reg"
 net pause "McShield"
 net stop "McShield"

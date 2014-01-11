@@ -14,7 +14,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{85DADE1D-E53C-4E3A-8514-1
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{A0EBB878-FDC0-4514-AEE9-F68E4337E7D2}" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{FB49CFE3-C775-48f1-B0C6-BEBABF84EFF9}" /f
 reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatch" /f
-reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatch.1 "/f
+reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatch.1" /f
 reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatchAppDetails" /f
 reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatchAppDetails.1" /f
 reg delete "HKEY_CLASSES_ROOT\McHackerWatchLib.McHackerWatchAppEntry" /f

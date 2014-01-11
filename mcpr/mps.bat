@@ -1,3 +1,4 @@
+set orig=%CD%
 cd %windir%\system
 regsvr32 /u /s mclsp
 regsvr32 /u /s mcgdping
@@ -8,7 +9,7 @@ redirsvc.exe -u
 regsvr32 /u /s "%WINDIR%\System32\mcrtl32.dll"
 del /F /Q "%WINDIR%\System32\mcrtl32.dll"
 unlocker "%WINDIR%\System32\mcrtl32.dll" /D /S
-cd "%PROGRAMFILECOMMON"
+cd %orig%
 rundll32 mpsunins.dll,mpsunins 
 regsvr32 /u /s "%WINDIR%\System32\mclsp.dll"
 regsvr32 /u /s "c:\progra~1\McAfee.com\MPS\mcgdping.dll"
@@ -78,7 +79,7 @@ reg delete "HKLM\SOFTWARE\Classes\CLSID\TypeLib\{3A48F389-2F3A-4D3A-B646-681886F
 reg delete "HKEY_CLASSES_ROOT\AppID\{8A75732C-4275-434B-BB81-5744F5B6F841}" /f
 reg delete "HKEY_CLASSES_ROOT\AppID\McRedirectorVer.DLL" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\{8A75732C-4275-434B-BB81-5744F5B6F841}" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\McRedirectorVer.DLL"
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\McRedirectorVer.DLL" /f
 reg delete "HKLM\SOFTWARE\McAfee\Events\Redirector" /f
 reg delete "HKLM\SOFTWARE\McAfee\Redirector" /f
 reg delete "HKLM\SOFTWARE\Classes\AppID\{8E9EFC74-7B0D-4CEF-8A8F-FAD05CF70AD4}" /f
@@ -650,3 +651,4 @@ reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Applic
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MPS9" /f
 reg delete "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\GuardDogEXE" /f
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\McAfee Privacy Service" /f
+cd %orig%

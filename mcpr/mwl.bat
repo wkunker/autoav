@@ -262,4 +262,4 @@ del /F /Q "%COMMONDESKTOP%\McAfee Wireless Network Security.lnk"
 del /F /Q "%COMMONDESKTOP%\McAfee Wireless Home Network Security.lnk"
 del /F /Q "%COMMONPROGRAMS%\McAfee\McAfee Wireless Network Security.lnk"
 del /F /Q "%COMMONPROGRAMS%\McAfee\McAfee Wireless Home Network Security.lnk"
-reg delete "%PROGRAMFILES%\McAfee\MWL" /f
+rd /Q /S "%PROGRAMFILES%\McAfee\MWL"
