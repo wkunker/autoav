@@ -1,33 +1,34 @@
 cd /D %~dp0
-echo %SYSTEMROOT% | shell\cut -c1-1 > DRIVE_LETTER.txt
-set /p DRIVE_LETTER=<DRIVE_LETTER.txt
+echo %SYSTEMROOT% | shell\cut -c1-1 > tmp\DRIVE_LETTER.txt
+set /p DRIVE_LETTER=<tmp\DRIVE_LETTER.txt
 echo "Initializing..."
-del /q ADWA.txt
-del /q ADWB.txt
-del /q TDSS.txt
-del /q HITMAN.txt
-del /q PROCESSOR_ARCHITECTURE.txt
-del /q AUTOAV_PATH.txt
+del /q tmp\state.txt
+del /q tmp\state_temp.txt
+del /q tmp\ADWA.txt
+del /q tmp\ADWB.txt
+del /q tmp\TDSS.txt
+del /q tmp\HITMAN.txt
+del /q tmp\PROCESSOR_ARCHITECTURE.txt
+del /q tmp\AUTOAV_PATH.txt
 del /q %DRIVE_LETTER%:\AUTOAV_PATH.txt
-del /q SYSTEMROOT.txt
+del /q tmp\SYSTEMROOT.txt
 del /q %SYSTEMROOT%\system32\autoav_getsystemroot.bat
 for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set curdate=%%c-%%a-%%b)
 "set datetime=%curdate%_%time%"
 "set CURDATETIME=%datetime::=-%"
 "mkdir log\backups\%CURDATETIME%"
 "move log\*.log log\backups\%CURDATETIME%"
-copy 0.txt ADWA.txt
-copy 0.txt ADWB.txt
-copy 0.txt TDSS.txt
-copy 0.txt HITMAN.txt
+copy tmp\0.txt tmp\ADWA.txt
+copy tmp\0.txt tmp\ADWB.txt
+copy tmp\0.txt tmp\TDSS.txt
+copy tmp\0.txt tmp\HITMAN.txt
 copy autoav_getsystemroot.bat %SYSTEMROOT%\system32
-echo %PROCESSOR_ARCHITECTURE% > PROCESSOR_ARCHITECTURE.txt
-echo %cd% > AUTOAV_PATH.txt
+echo %PROCESSOR_ARCHITECTURE% > tmp\PROCESSOR_ARCHITECTURE.txt
+echo %cd% > tmp\AUTOAV_PATH.txt
 "shell\cat" "%DRIVE_LETTER%:\AUTOAV_PATH.txt"
 call log.bat "AutoAV Started." %cd%\log\proc.log
-del state.txt
-start %cd%\AdwCleaner.exe
-echo adw1 > state.txt
+start %cd%\dl\AdwCleaner.exe
+echo adw1 > tmp\state.txt
 set proccmd=%cd%\launch-proc.bat
-echo 'launch-proc.bat' scheduled to taskscheduler: %proccmd% > log/launch-offline.log
+echo 'launch-proc.bat' scheduled to taskscheduler: %proccmd% > log\launch-offline.log
 schtasks /create /tn "AutoAV Reloader" /tr "%proccmd%" /sc MINUTE

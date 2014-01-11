@@ -11,8 +11,8 @@ def log(msg):
 def isProcAlive():
 	rslt = ""
 	log("Trying to find process by name 'adwcleaner'...")
-	proc = subprocess.Popen('del state.txt', shell=True, stdout=subprocess.PIPE)
-	proc = subprocess.Popen('echo adw2 > state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('del tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('echo adw2 > tmp/state.txt', shell=True, stdout=subprocess.PIPE)
 	rslt = proc.communicate()[0].strip()
 	it = 0
 	while(len(rslt) < 2):

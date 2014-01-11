@@ -1,4 +1,4 @@
-del rkill.exe
-"python\python" fetch_rkill.py > rkill_output.txt
-set /p  rkillurl= < rkill_output.txt
-"shell\wget" %rkillurl%
+del dl\rkill.exe
+fetch_rkill > tmp\rkill_output.txt
+set /p  rkillurl= < tmp\rkill_output.txt
+"shell\wget" -P dl %rkillurl%

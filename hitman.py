@@ -18,8 +18,8 @@ def log(msg):
 
 def run():
 	# Set state so proc knows it's already running.
-	proc = subprocess.Popen('del state.txt', shell=True, stdout=subprocess.PIPE)
-	proc = subprocess.Popen('echo hitman > state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('del tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('echo hitman > tmp/state.txt', shell=True, stdout=subprocess.PIPE)
 	rslt = proc.communicate()[0].strip
 
 	rslt = ""
@@ -34,8 +34,8 @@ def run():
 			log("Timed out (" + str(it) + "s) trying to find process by name '" + procname + "'. Setting state and skipping HitmanPro.")
 			# Update the state
 			log("Changing state to finish...")
-			proc = subprocess.Popen('del state.txt', shell=True, stdout=subprocess.PIPE)
-			proc = subprocess.Popen('echo finish > state.txt', shell=True, stdout=subprocess.PIPE)
+			proc = subprocess.Popen('del tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+			proc = subprocess.Popen('echo finish > tmp/state.txt', shell=True, stdout=subprocess.PIPE)
 			rslt = proc.communicate()[0].strip()
 			log("Successfully changed state to finish.")
 			sys.exit(0)

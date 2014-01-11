@@ -9,13 +9,13 @@ def log(msg):
 	subprocess.Popen("log.bat" + " \"" + msg.replace("\"", "") + "\" " + logfile, shell=True)
 
 def run():
-	proc = subprocess.Popen('del state.txt', shell=True, stdout=subprocess.PIPE)
-	proc = subprocess.Popen('echo tdss > state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('del tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('echo tdss > tmp/state.txt', shell=True, stdout=subprocess.PIPE)
 	rslt = proc.communicate()[0].strip()
 
 	log("Starting application 'tdsskiller.exe'...")
 	app = pywinauto.application.Application()
-	app.start('TDSSKiller.exe')
+	app.start('dl/TDSSKiller.exe')
 	
 	log("Waiting 10s to ensure the app is fired up.")
 	time.sleep(10)
@@ -53,8 +53,8 @@ def run():
 	ctrl.Click()
 	
 	log("Setting state...")
-	proc = subprocess.Popen('del state.txt', shell=True, stdout=subprocess.PIPE)
-	proc = subprocess.Popen('echo start_hitman > state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('del tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+	proc = subprocess.Popen('echo start_hitman > tmp/state.txt', shell=True, stdout=subprocess.PIPE)
 	rslt = proc.communicate()[0].strip
 	log("State successfully set to 'start_hitman'.")
 

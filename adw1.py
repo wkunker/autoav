@@ -27,7 +27,6 @@ def run():
 		if(it >= 5):
 			log("Timed out (" + str(it) + "s) trying to find process by name 'adwcleaner'. Quitting.")
 			sys.exit(0)
-		
 	
 	log("Found process 'adwcleaner' (id: " + rslt + "). Connecting to application...")
 	app = pywinauto.application.Application()
@@ -99,9 +98,9 @@ def run():
 		# State must always be set to something.
 		#
 		log("Changing state to adw2...")
-		proc = subprocess.Popen('echo adw2 > state_temp.txt', shell=True, stdout=subprocess.PIPE)
-		proc = subprocess.Popen('move /Y state_temp.txt state.txt', shell=True, stdout=subprocess.PIPE)
-		proc = subprocess.Popen('del state_temp.txt', shell=True, stdout=subprocess.PIPE)
+		proc = subprocess.Popen('echo adw2 > tmp/state_temp.txt', shell=True, stdout=subprocess.PIPE)
+		proc = subprocess.Popen('move /Y tmp/state_temp.txt tmp/state.txt', shell=True, stdout=subprocess.PIPE)
+		proc = subprocess.Popen('del tmp/state_temp.txt', shell=True, stdout=subprocess.PIPE)
 		rslt = proc.communicate()[0].strip
 		log("Successfully changed state to adw2.")
 

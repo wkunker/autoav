@@ -1,4 +1,6 @@
-del "tweaking.com_windows_repair_aio.zip"
+cd dl
 rd /s /q "Tweaking.com - Windows Repair"
-"shell\wget" "http://www.tweaking.com/files/setups/tweaking.com_windows_repair_aio.zip"
-"7z\7za" x "tweaking.com_windows_repair_aio.zip"
+"..\shell\wget" "http://www.tweaking.com/files/setups/tweaking.com_windows_repair_aio.zip"
+"..\7z\7za" x "tweaking.com_windows_repair_aio.zip"
+del "tweaking.com_windows_repair_aio.zip"
+cd ..
