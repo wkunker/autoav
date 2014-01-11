@@ -1,0 +1,28 @@
+Accept the ini file as argument
+
+-process all variable assignments in their respective subsections
+-"execute" each "CAPITALIZED" subsection starting with "[PRE]"
+	-process all subsection executions (i.e. "op1.1") (if any)
+
+
+subsections:
+[PRE], [POST], [DETECT], [UNINSTALL]
+
+
+
+type=cmd
+cmd="PATH_TO_EXE"
+
+type=directory, appdatadirectory, emptydirectory, file      <-- Note: when provided without an action, default to "remove"
+path="PATH_TO_DIRECTORY"
+action=remove
+
+type=regkeylist
+extpath=RegKeyList.txt
+action=remove, exists
+
+type=regkey
+name=HKLM\foo\foo
+value=MPFP
+action=removemultisz, exists
+

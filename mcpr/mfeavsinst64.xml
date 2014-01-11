@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package AMCoreVersion="1.1.2.113.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1">
+<Feature tag="OAS">
+    <Driver>
+        <InfFile sha256="73a930648f4eeb0246ed9efb7f6c7122767f710146de9f727b14ec0791fc07d9">mfencbdc.inf</InfFile>
+        <SysFile sha256="57358650cdc6fa243982dc37dca3d3d628f2d3d6e558ce300e75f8d0b9d6abdd">mfencbdc.sys</SysFile>
+    </Driver>
+    <Driver>
+        <InfFile sha256="c7441445f62c884579eb065f2e8bba107c65300a1835cac5baede8e3457e7de6">mfencrk.inf</InfFile>
+        <SysFile sha256="e3bc14088a7116efaa8ac8e3d05ccc4bb84ef01637525a19b2b37099c16ffe02">mfencrk.sys</SysFile>
+        <SysFile sha256="c44bb62c5a5b5463492e26e7d1980c3ddc1584036dcac2fae764c0bba024a1a0">mfeclnrk.sys</SysFile>
+    </Driver>
+
+    <FileOperation operation="copy" sha256="ae9daa5a0dbb779189520266237cee8d8eb09a6ca5558fbb56eb669b5738bf56">EMMain.dll</FileOperation>
+
+    <FileOperation operation="copy" destination="$INSTALL_PATH\Microsoft.VC90.CRT" sha256="58fc4416331672c7b7a413ce071c01ddfdf91ed1c0604ce014250b38dfc78787">Microsoft.VC90.CRT.manifest</FileOperation>
+    <FileOperation operation="copy" destination="$INSTALL_PATH\Microsoft.VC90.CRT" sha256="10859f06f41144fa32cf5da223511f85fe349b1d76471ef65f0395dac606ef63">msvcp90.dll</FileOperation>
+    <FileOperation operation="copy" destination="$INSTALL_PATH\Microsoft.VC90.CRT" sha256="e11ce4b90db815359b2d76f95f623fc26924c5a254f0540224fa6feb623817e5">msvcr90.dll</FileOperation>
+
+    <FileOperation operation="copy" source="x86" destination="$INSTALL_PATH\x32" sha256="a68df7800a7f8f265f32069b61f579917ce53102dd7e04a79ed314ab93d69d47">emcode.dll</FileOperation>
+    <FileOperation operation="copy" source="x86" destination="$INSTALL_PATH\x32" sha256="35ce11c94a5942023c144a69c44bf55fbb74e7afbc76ea7432236a0168fa5add">emhost.dll</FileOperation>
+    <FileOperation operation="copy" source="x86" destination="$INSTALL_PATH\x32" sha256="870ebafc13f57ba32587baac7edf9dcc888772788623baaddaecf6c2325c878f">EMEvtPub.dll</FileOperation>
+    <FileOperation operation="copy" source="x86" destination="$INSTALL_PATH\x32" sha256="80e6baca757368cf5b8864a97b797a65c30a1418505c6f2ef9f139fca306873c">emhost_l.dll</FileOperation>
+    <FileOperation operation="copy" source="x86" destination="$INSTALL_PATH\x32" sha256="9db3c762bc27663ba4199c6a6d092a627cbe7688e266bcc85550a6ad8f838ad0">McShieldClient.dll</FileOperation>
+
+    <FileOperation operation="copy" source="x86_64" destination="$INSTALL_PATH\x64" platform="x64" sha256="7f49a698065aeed6f1b6f62ce15e88cecee695f64408a9fdf408b4eebb5ad90a">emcode.dll</FileOperation>
+    <FileOperation operation="copy" source="x86_64" destination="$INSTALL_PATH\x64" platform="x64" sha256="747b262e6ff2234d92938692092d76491ca2d7d4f77627904760599acb2a548e">emhost.dll</FileOperation>
+    <FileOperation operation="copy" source="x86_64" destination="$INSTALL_PATH\x64" platform="x64" sha256="66d568cd395ff7ebb02a7dacf270518fc11330290a07f3acd0b2eda20509c36d">EMEvtPub.dll</FileOperation>
+    <FileOperation operation="copy" source="x86_64" destination="$INSTALL_PATH\x64" platform="x64" sha256="e83a4d08fed7c7a33e98f9a324ce5f7415eec76c16e94f0ed73aece085fe2647">emhost_l.dll</FileOperation>
+    <FileOperation operation="copy" source="x86_64" destination="$INSTALL_PATH\x64" sha256="373cbfcf0fb3e97f217d7ade2d5275e43e4a7f021a85d6785361f033609a74f3">McShieldClient.dll</FileOperation>
+
+    <FileOperation operation="copy" sha256="de15c6519ed8daf0a73f466c2fce46bf496d2e8812e6ec99af7207250b7a695f">MFE_DS.dll</FileOperation>
+    <FileOperation operation="copy" sha256="c6e03604c36cd805d7783de4bc74291ffe60e2aafdd0084b607239c3d7122c97">MFE_CS.dll</FileOperation>
+    <FileOperation operation="copy" sha256="24dc8f9b0434ace4a5eb4781f2c86dfe221f419c693d9db0cb90a93a666e8aaf">quarantine.dll</FileOperation>
+    <FileOperation operation="copy" sha256="d5461481a5c865a5c56bc74846fcc445d90b8d61ce07dc615a52a3df2b1b2a18">mfezip.dll</FileOperation>
+    <FileOperation operation="copy" sha256="dcc63fd4a10559fbfdd8427790d9e281889339e05ae4365e6829c200944dbaf9">mfeunzip.dll</FileOperation>
+    <FileOperation operation="copy" sha256="3540103adadb3a18c02b80def040ebcdc4c5e9df4b14b707512cca3125c6182e">ncapi.dll</FileOperation>
+    <FileOperation operation="copy" sha256="2cb5d361b4efded0188ca5670f9b1b0e9262f570d687ade75d365bcb8de4f9b0">AVEvent.dll</FileOperation>
+    <FileOperation operation="copy" sha256="373cbfcf0fb3e97f217d7ade2d5275e43e4a7f021a85d6785361f033609a74f3">McShieldClient.dll</FileOperation>
+    <FileOperation operation="copy" sha256="38f3cf6e7e6e35323df0d7716a5f3f7f30f55b311887f138a685a8ff19cbd7ea">lua_lib.dll</FileOperation>
+    <FileOperation operation="copy" sha256="60f6487ddbfaf6bb1474bc94cbeaa41a5b36e35d255ad7ab140a5da7c1b2276d">mcshield.exe</FileOperation>
+    <FileOperation operation="copy" sha256="768add7b061523e92ee2a506006d789ef1f26847eeabe282c8b84ead57ed86ad">metro_repair.dll</FileOperation>
+    
+    <DirectoryOperation operation="create">$INSTALL_PATH\EM</DirectoryOperation>
+    <DirectoryOperation operation="create">$INSTALL_PATH\ContentBackup</DirectoryOperation>
+    <DirectoryOperation operation="create">$INSTALL_PATH\Microsoft.VC90.CRT</DirectoryOperation>
+    <DirectoryOperation operation="create">$INSTALL_PATH\x32</DirectoryOperation>
+    <DirectoryOperation operation="create">$INSTALL_PATH\x64</DirectoryOperation>
+
+    <RegistryOperation operation="create">
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution">
+        <RegValue type="DWORD" name="dwAVSolutionIsLicensed" data="1"/>
+        <RegValue type="SZ" name="szAVSolutionVersion" data="1.0"/>
+      </RegKey>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\Install_Reference">
+        <RegValue type="SZ" name="szInstallPath" data="$INSTALL_PATH"/>
+        <RegValue type="SZ" name="szContentPath" data="$CONTENT_PATH"/>
+      </RegKey>
+
+      <RegKey key="HKLM\SYSTEM\CurrentControlSet\services\mfencbdc">
+        <RegValue type="SZ" name="ClientPath01" data="$INSTALL_PATH\mcshield.exe"/>
+      </RegKey>
+
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\AVS\AVS">
+        <RegValue type="SZ" name="szRealtimeScanSD" data="$REALTIME_SCAN_SD"/>
+        <RegValue type="SZ" name="szConfigSD" data="$CONFIG_SD"/>
+        <RegValue type="SZ" name="szAMCoreVersion" data="1.1.2.113.3"/>
+      </RegKey>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\DS\DS">
+        <RegValue type="DWORD" name="dwProductID" data="1"/>
+        <RegValue type="SZ" name="szScannersPath" data="$CONTENT_PATH\scanners"/>
+        <RegValue type="SZ" name="szContentPath" data="$CONTENT_PATH\content"/>
+        <RegValue type="SZ" name="szCloudSdkPath" data="$INSTALL_PATH\CloudSDK"/>
+      </RegKey>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\MCSHIELDGLOBAL\MCSHIELDGLOBAL"/>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\MCSHIELDGLOBAL\GLOBAL"/>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\OAS\OAS"/>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\ODS\ODS"/>
+
+      <RegKey key="HKLM\SOFTWARE\McAfee\AVSolution\EM\EM">
+        <RegValue type="DWORD" name="dwEMThreadCount" data="0"/>
+        <RegValue type="SZ" name="szEMBasePath" data="$INSTALL_PATH\EM"/>
+        <RegValue type="SZ" name="szDllPath32" data="$INSTALL_PATH\x32"/>
+        <RegValue type="SZ" name="szDllPath64" platform="x64" data="$INSTALL_PATH\x64"/>
+      </RegKey>
+
+      <RegKey key="HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\Application\AVLogEvent">
+        <RegValue type="DWORD" name="TypesSupported" data="7"/>
+        <RegValue type="SZ" name="EventMessageFile" data="$INSTALL_PATH\AVEvent.dll"/>
+      </RegKey>
+      <RegKey key="HKLM\SYSTEM\CurrentControlSet\Services\mfecore">
+        <RegValue type="DWORD" name="LockDownEnabled" data="1"/>
+      </RegKey>
+    </RegistryOperation>
+
+ <Service>
+      <ServiceFile>mcshield.exe</ServiceFile>
+  <ServiceName>mfecore</ServiceName> 
+  <DisplayName>McAfee Anti-Malware Core</DisplayName> 
+  <Description>McAfee OnAccess Scanner</Description> 
+  <DependOnService>mfevtp</DependOnService> 
+  <Start>2</Start> 
+ <FailureRestart>
+  <ResetPeriod>1800</ResetPeriod> 
+  <RestartCount>2</RestartCount> 
+  <RestartDelay>5</RestartDelay> 
+  </FailureRestart>
+  </Service>
+  </Feature>
+</Package>

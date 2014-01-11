@@ -1,0 +1,127 @@
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=vscore.inf
+
+[SourceDisksNames]
+1="McAfee VSCore","",1
+
+[Installer_Config]
+AppID=VSCore
+Shared=1
+
+[Env-Var]
+
+[DirIds]
+60000=%33000%\McAfee\VSCore
+61000=%CommonProgramW6432%\McAfee\VSCore
+62000=%CommonProgramW6432%\McAfee\Release
+56000=%33100%\McAfee\MCLOGS
+
+[DestinationDirs]
+VSCoreProduct86=60000
+VSCoreProduct64=61000
+
+[Shared_pkg]
+VSCore86=%60000%\vscore.inf
+VSCore64=%61000%\vscore64.inf
+
+[Install_NT]
+VSCoreLiInstall86=Setup
+AV86=RunINF2
+PostInstall=Setup
+
+[UnInstall_NT]
+VscoreUninstall86=EXE
+vscoreFolder=DelFolders
+RemoveReg=Setup
+
+[Install_VISTA_x64]
+VSCoreLiInstall64=Setup
+AV64=RunINF2
+PostInstall=Setup
+
+[UnInstall_VISTA_x64]
+VscoreUninstall64=EXE
+vscoreFolder64=DelFolders
+RemoveReg64=Setup
+
+[RemoveReg]
+DelReg=APReg,VSCoreReg,MiscReg
+
+[RemoveReg64]
+DelReg=APReg64,VSCoreReg64,MiscReg
+
+[VSCoreLiInstall86]
+CopyFiles=VSCoreProduct86
+AddReg=VSCoreReg
+
+[VSCoreLiInstall64]
+CopyFiles=VSCoreProduct64
+AddReg=VSCoreReg64
+
+[PostInstall]
+DelReg=RemoveLockdown
+AddReg=mfevtp_lockdownenabled
+AddReg=mfefire_lockdownenabled
+
+[mfevtp_lockdownenabled]
+HKLM,SYSTEM\CurrentControlSet\Services\mfevtp,"LockDownEnabled",65537,1
+
+[mfefire_lockdownenabled]
+HKLM,SYSTEM\CurrentControlSet\Services\mfefire,"LockDownEnabled",65537,1
+
+[APReg]
+HKLM,Software\Mcafee\AP
+
+[MiscReg]
+HKLM,SOFTWARE\McAfee\SharedPackages\VSCoreAv64
+HKLM,SOFTWARE\McAfee\SharedPackages\VSCoreAv86
+HKLM,SOFTWARE\McAfee\SystemCore
+HKLM,SOFTWARE\McAfee\VSCore
+
+[VSCoreReg]
+HKLM,Software\Mcafee\SystemCore,"szBackupDir",,%60000%
+[APReg64]
+HKLM,Software\Mcafee\AP
+[VSCoreReg64]
+HKLM,Software\Mcafee\SystemCore,"szBackupDir64",,%61000%
+
+[RemoveLockdown]
+HKLM,Software\McAfee\VSCore,"LockDownEnabled",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore,"LockDownEnabled",65537,1
+
+[vscoreFolder]
+%60000%
+
+[vscoreFolder64]
+%61000%
+%62000%
+
+[AV86]
+av.inf=%60000%
+
+[AV64]
+av64.inf=%61000%
+
+[VscoreUninstall86]
+%60000%\mfehidin.exe=-u -x """%60000%\vscore.xml""",1,1
+%10%\system32\regsvr32.exe="""%60000%\VSCVer.dll""" /u /s
+%10%\system32\regsvr32.exe=%10%\system32\jscript.dll /s
+%10%\system32\regsvr32.exe=%10%\system32\vbscript.dll /s
+%10%\system32\regsvr32.exe=%10%\system32\jscript9.dll /s
+
+[VscoreUninstall64]
+%61000%\mfehidin.exe=-u -x """%61000%\vscore.xml""",1,1
+%10%\system32\regsvr32.exe="""%61000%\VSCVer.dll""" /u /s
+%10%\system32\regsvr32.exe=%10%\system32\jscript.dll /s
+%10%\system32\regsvr32.exe=%10%\system32\vbscript.dll /s
+%10%\system32\regsvr32.exe=%10%\system32\jscript9.dll /s
+
+
+[VSCoreProduct86]
+vscore.inf,,,65568
+
+[VSCoreProduct64]
+vscore64.inf,,,65568
+

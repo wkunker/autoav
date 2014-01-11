@@ -1,0 +1,177 @@
+<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mfehidin.xsd">
+	<CoreInstall>
+		<General>
+			<Version>15.1.0.537.6</Version>
+			<ProductId>{E179F170-519B-469d-AF72-BF56E2B1EED7}</ProductId>
+			<CorePath>McAfee\SystemCore</CorePath>
+			<CorePath_X86>McAfee\SystemCore</CorePath_X86>
+			<SourcePath_X86>..\release</SourcePath_X86>
+			<Base>
+				<FileName sha256="755ea7b09e5b54268819d2f1de8e22e1f70b4c48d01c705b1ab8190c0bcdeae6">mfehidk.sys</FileName>
+				<FileName sha256="5a6dcdd8aa7dfeade21df74b96e6a27bede6597e9739ef2389e775af80b494c0">mfevtps.exe</FileName>
+				<FileName sha256="9520b2f2e64d2db2f18336d390b9dc42435340426d5f27e3a3d2b6f9064b3713">mfehidk_messages.dll</FileName>
+				<FileName sha256="785788ac9116d064836bf0eefeda5d7c4261c860f2a4fe445f633871f78894a6">mfetdi2k.sys</FileName>
+				<FileName sha256="2dd1c17044210121f1e02e851b42abdfc565edd4b9930966c258736aeacad99c">mfewfpk.sys</FileName>
+			</Base>
+		</General>
+		<Feature tag="AVDriver" GUID="{503E6F51-847B-417F-9C5C-54CB7A4BA70E}">
+			<Driver bootload="2" vtpoptions="0x140000">
+				<FileName sha256="eff130fd64803f748458b0f0a0b0c48f0634f1bfda58296aec866aac67743799">mfeavfk.sys</FileName>
+			</Driver>
+			<Core>
+				<FileName sha256="7a08f99b3a1e18a407210e2d0f9f2c16f61926a618b02693faedf28d296f9a52">mfeavfa.dll</FileName>
+				<FileName sha256="104c407914297de04f891e0c3d3609c908991b7697cbd5ffd43f9571cf211124">mfevtpa.dll</FileName>
+				<FileName sha256="e672f0f7a430867031fc949a4cb4e69e63c92ba7dcfe3196e822753fce1041e0">mfehida.dll</FileName>
+				<Directory platform="x64" location="$COREPATH_X86">
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="5df187c8692ed93254ed251f4d1ad24b8ae7c0effcff6a2e5368c255e5812a73">mfeavfa.dll</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="447c4ae8e4293073c24ceac5b1a79e70131d745aa02683052e4fe61875079f73">mfehida.dll</FileName>
+				</Directory>
+			</Core>
+		</Feature>
+		<Feature tag="APDriver" GUID="{B7515DAA-79BF-4F3E-AF16-7D79F5242583}">
+			<Driver vtpoptions="0x140000">
+				<FileName sha256="858aaf846e131e92f58c79f61c71830d6b6fa091444173ea3d7f8dc50c97f329">mfeapfk.sys</FileName>
+			</Driver>
+			<Core>
+				<FileName sha256="1153547e78df8191593be1e7c99ef13b2b0d4098577c0c263642a2dffaee0cb0">mfeapfa.dll</FileName>
+			</Core>
+		</Feature>
+		<Feature tag="BOPDriver" GUID="{8BE5C2DC-B74A-4FFF-A182-756F1CBB94E5}">
+			<Driver platform="x86" vtpoptions="0x140000">
+				<FileName sha256="25951a28c84a3715beaf4a4366301efc33e6ad612320b2da7739dca51851dd20">mfebopk.sys</FileName>
+			</Driver>
+			<Core>
+				<FileName platform="x86" sha256="2f4713d34bfece2e16b62feae51ef124597fb92b925b75776fc8e0bbf7e891ad">mfebopa.dll</FileName>
+				<FileName sha256="104c407914297de04f891e0c3d3609c908991b7697cbd5ffd43f9571cf211124">mfevtpa.dll</FileName>
+			</Core>
+		</Feature>
+		<!-- this section makes sure mfendisk is deleted when the OS
+
+
+
+
+
+
+
+   is upgraded from XP to Vista+ -->
+		<Feature tag="firecore" GUID="{615BE029-30AB-468E-9872-255537380B1D}">
+			<Driver winver="6000-" action="forceuninstall">
+				<FileName sha256="4b645e19f435545f128c17a37606d68eefa2872c16f209df02765a8da83c1f03">mfendisk.sys</FileName>
+				<Inf>mfendisk.inf</Inf>
+				<Cat>mfendisk.cat</Cat>
+			</Driver>
+		</Feature>
+		<Feature tag="firecore" GUID="{615BE029-30AB-468E-9872-255537380B1D}">
+			<Driver winver="6010-" action="forceuninstall">
+				<FileName sha256="f92cb59b67d1dd2f7edfa5bac656dcb32e12bc7e921b47054111c866c06952d8">mfenlfk.sys</FileName>
+				<Inf>mfenlfk.inf</Inf>
+				<Cat>mfenlfk.cat</Cat>
+			</Driver>
+		</Feature>
+		<Feature tag="firecore" GUID="{615BE029-30AB-468E-9872-255537380B1D}">
+			<Driver bootload="true" safeboot="network">
+				<FileName sha256="3dfe6c3c010e96fca39ba2af6ba19e419c5e4e32fbaa9b7df22d44cd3f33ebf6">mfefirek.sys</FileName>
+			</Driver>
+			<Driver winver="5000-5299">
+				<FileName sha256="4b645e19f435545f128c17a37606d68eefa2872c16f209df02765a8da83c1f03">mfendisk.sys</FileName>
+				<Inf>mfendisk.inf</Inf>
+				<Cat>mfendisk.cat</Cat>
+			</Driver>
+			<Driver winver="6000-6000">
+				<FileName sha256="f92cb59b67d1dd2f7edfa5bac656dcb32e12bc7e921b47054111c866c06952d8">mfenlfk.sys</FileName>
+				<Inf>mfenlfk.inf</Inf>
+				<Cat>mfenlfk.cat</Cat>
+			</Driver>
+			<!-- avf driver -->
+			<Driver bootload="2" vtpoptions="0x140000">
+				<FileName sha256="eff130fd64803f748458b0f0a0b0c48f0634f1bfda58296aec866aac67743799">mfeavfk.sys</FileName>
+			</Driver>
+			<Core>
+				<FileName sha256="e672f0f7a430867031fc949a4cb4e69e63c92ba7dcfe3196e822753fce1041e0">mfehida.dll</FileName>
+				<FileName sha256="104c407914297de04f891e0c3d3609c908991b7697cbd5ffd43f9571cf211124">mfevtpa.dll</FileName>
+				<FileName sha256="c01a5a877704e39ee8fecef3c54bf2370808a61a71097a142c23a5f4db233bb0">mfefwctl.dll</FileName>
+				<FileName sha256="171581d26a9190fcf09c62070609daab0172c107134dac1a15291541425de9bb">fwinfo.exe</FileName>
+				<!-- Install this 32-bit file on 64-bit machines -->
+				<Directory platform="x64" location="$COREPATH_X86">
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="4622f76586bd53bae28a285227c7e918543f6517a6102e1119a65455df87d8cc">mfefwctl.dll</FileName>
+				</Directory>
+				<!-- avf driver -->
+				<FileName sha256="7a08f99b3a1e18a407210e2d0f9f2c16f61926a618b02693faedf28d296f9a52">mfeavfa.dll</FileName>
+				<FileName sha256="e672f0f7a430867031fc949a4cb4e69e63c92ba7dcfe3196e822753fce1041e0">mfehida.dll</FileName>
+				<Directory platform="x64" location="$COREPATH_X86">
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="5df187c8692ed93254ed251f4d1ad24b8ae7c0effcff6a2e5368c255e5812a73">mfeavfa.dll</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="447c4ae8e4293073c24ceac5b1a79e70131d745aa02683052e4fe61875079f73">mfehida.dll</FileName>
+				</Directory>
+			</Core>
+			<Service location="$COREPATH" control="start_stop_restart" safeboot="network">
+				<FileName sha256="9c6ea1ba9be1ffe6fc4f1200855ef95d95a202ab92efd2f679bde693865c1599">mfefire.exe</FileName>
+				<ServiceName>mfefire</ServiceName>
+				<DisplayName>McAfee Firewall Core Service</DisplayName>
+				<Description>Provides firewall services to McAfee products</Description>
+				<DependOnService>mfevtp</DependOnService>
+				<LockDownEnabled>1</LockDownEnabled>
+				<Start>2</Start>
+				<FailureRestart>
+					<ResetPeriod>5184000</ResetPeriod>
+					<RestartCount>2</RestartCount>
+					<RestartDelay>60</RestartDelay>
+				</FailureRestart>
+			</Service>
+		</Feature>
+		<Feature tag="ScriptScanC" GUID="{8BE5C2DC-B74A-4FFF-A182-756F1CBB94E5}">
+			<!-- Uninstall both 32-bit and 64-bit Script Scans -->
+			<Process wait="true" action="onUninstall">"DAInstall.exe" -usc "$COREPATH"</Process>
+			<Process wait="true" platform="x64" action="onUninstall">"$SOURCEPATH_X86\DAInstall.exe" -usc "$COREPATH_X86"</Process>
+			<Core>
+				<!-- Add ref count of SystemCore and VSCORE keys -->
+				<Registry key="HKLM\software\mcafee\SystemCore"/>
+				<Registry key="HKLM\software\mcafee\SystemCore\vscore"/>
+				<!-- ScriptScan binaries on native OS. For common files, this makes them properly ref counted -->
+				<FileName sha256="5b10439745c4bcae82dea550f26c1bd0c19ab4c95f8091dc47596fa11220ecaa">scriptsnc.dll</FileName>
+				<FileName platform="x86" hash="no">Strings.bin</FileName>
+				<FileName platform="x64" hash="no" source="$SOURCEPATH_X86">strings.bin</FileName>
+				<FileName platform="x86">scriptffc.dll</FileName>
+				<FileName platform="x86">Scriptff.js</FileName>
+				<FileName platform="x86">ScriptFF.gif</FileName>
+				<FileName platform="x86">ScriptFF.xul</FileName>
+				<FileName platform="x86">chrome_casper.manifest</FileName>
+				<FileName platform="x86" sha256="506354815b5d3848bc080d2507de8c847c83866d46868efc098831925505f12a">install.rdf</FileName>
+				<FileName sha256="2954232c8788a7fa01d00d1527948eba5ee1f82dfa8c4f26688b428fa5a75a01">dainstall.exe</FileName>
+				<!-- On 64-bit platform, copy 32-bit ScriptScan binaries -->
+				<Directory platform="x64" location="$COREPATH_X86">
+					<FileName source="$SOURCEPATH_X86" hash="no">Strings.bin</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="8271361929d0e8f4087de186c4c1f45a45f13b916238b88f7f06048479eea68c">scriptsnc.dll</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="6cb4fd482da26c5fc2a7ce351c3e1c43aa681b9ecd2a6147e4ead1ef0fda4443">scriptffc.dll</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="b42e1c2d9b2b830c45871a92ad156283314abee84bc44c0d287df92d05e2f30a">ScriptFF.js</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="e2a28897c5521a33ed834767c4c3a8d07b141ac8bf07bbc6f0d9629fa914c3af">ScriptFF.gif</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="1cfaac48eacbb470a8e776cb70590747d3c571b95e029d23974b48f75889e546">ScriptFF.xul</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="434ee323afd3f68c8e4c2802b049f87c99220dda5a8ee343b6c587bb14325af7">chrome_casper.manifest</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="506354815b5d3848bc080d2507de8c847c83866d46868efc098831925505f12a">install.rdf</FileName>
+					<FileName source="$SOURCEPATH_X86" sign_source="..\release" sha256="dda5ee30624a7f54d6f0e59284acc3b4e7f1ff293acfbc646fdd2b0a8db3c81d">dainstall.exe</FileName>
+				</Directory>
+			</Core>
+			<!-- Install/upgrade Script Scan on native platform -->
+			<Process wait="true" action="onInstall">"DAInstall.exe" -isc "$COREPATH"</Process>
+			<Process wait="true" action="onUpgrade">"DAInstall.exe" -isc "$COREPATH"</Process>
+			<!-- On 64-bit platform, Install/upgrade 32-bit ScriptScan -->
+			<Process wait="true" platform="x64" action="onInstall">"$SOURCEPATH_X86\DAInstall.exe" -isc "$COREPATH_X86"</Process>
+			<Process wait="true" platform="x64" action="onUpgrade">"$SOURCEPATH_X86\DAInstall.exe" -isc "$COREPATH_X86"</Process>
+		</Feature>
+		<Feature tag="ELAM" GUID="{C6A18CBE-A632-4C75-AB1F-7E6ECF3E610F}">
+			<Driver winver="6200-">
+				<FileName sha256="d83051a1e17b40ffe0e213079f6c1601b74f91e01e9e06561a858b2a77b9feb0">mfeelamk.sys</FileName>
+				<Start>0</Start>
+				<Group>Early-Launch</Group>
+			</Driver>
+			<Core>
+				<FileName sha256="e672f0f7a430867031fc949a4cb4e69e63c92ba7dcfe3196e822753fce1041e0">mfehida.dll</FileName>
+				<FileName sha256="ede9eb33d6217fb9339ce14c9c25ea163b9871645415643ae05bb34023e2b26f">mfeelama.dll</FileName>
+			</Core>
+		</Feature>
+		<Feature tag="firecore" GUID="{615BE029-30AB-468E-9872-255537380B1D}">
+			<Driver>
+				<FileName sha256="1b108bbcef227bf4126e1f66b1d0bc0635de32aba8bd4bdaa7327e793d05562c">cfwids.sys</FileName>
+			</Driver>
+		</Feature>
+	</CoreInstall>
+	<Signature><SignedInfo><Reference><DigestValue sha256="0466f9cccf7444877a24a5af988e3544f4b18cabfceb81cb53c5366bdecbb744">f3cf3815bb256c49157053b725da00d7</DigestValue></Reference></SignedInfo><SignatureValue><![CDATA[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]]></SignatureValue></Signature></Package>

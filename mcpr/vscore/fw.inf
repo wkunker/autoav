@@ -1,0 +1,51 @@
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=fw.inf
+
+[SourceDisksNames]
+1="McAfee VSCore Firewall","",1
+
+[Installer_Config]
+AppID=VSCore
+Shared=1
+
+[Env-Var]
+%VSCOREINSTALL_DIR%=$REG$Key=Software\McAfee\SystemCore\VSCore:Name=szInstallDir32
+%VSCOREINSTALL_DIR64%=$REG$Key=Software\McAfee\SystemCore\VSCore:Name=szInstallDir64
+
+[DirIds]
+54000=%VSCOREINSTALL_DIR%
+55000=%VSCOREINSTALL_DIR64%
+60000=%33000%\McAfee\VSCore
+61000=%CommonProgramW6432%\McAfee\VSCore
+
+[DestinationDirs]
+
+[Shared_pkg]
+VSCoreFw86=%60000%\fw.inf
+VSCoreFw64=%61000%\fw64.inf
+
+[Install_NT]
+InstallRun86=EXE
+
+[UnInstall_NT]
+UninstallRun86=EXE
+
+[Install_VISTA_x64]
+InstallRun64=EXE
+
+[UnInstall_VISTA_x64]
+UninstallRun64=EXE
+
+[InstallRun86]
+%60000%\mfehidin.exe=-i -x """%60000%\vscore.xml""" firecore,1,1
+
+[UninstallRun86]
+%60000%\mfehidin.exe=-u -x """%60000%\vscore.xml""" firecore,1,1
+
+[InstallRun64]
+%61000%\mfehidin.exe=-i -x """%61000%\vscore.xml""" firecore,1,1
+
+[UninstallRun64]
+%61000%\mfehidin.exe=-u -x """%61000%\vscore64.xml""" firecore,1,1
