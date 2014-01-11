@@ -1,4 +1,13 @@
 @echo off
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    goto adminok
+) else (
+    echo Failure: Please run as administrator.
+    pause
+    exit
+)
+:adminok
 echo Testing internet connection...
 cd /D %~dp0
 Ping www.google.com -n 1 -w 1000
@@ -9,7 +18,9 @@ echo Not Connected! Eventually this will hook into a network repair component. E
 pause
 exit
 :success
-call uac-disable.bat
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" /v *runautoav /t REG_SZ /d "%CD%\launch-online_startup.bat"
-shutdown -t 0 -r -f
 @echo on
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" /v *runautoav /t REG_SZ /d "%CD%\launch-online_startup.bat"
+start uac-disable.bat
+echo Rebooting to complete UAC disable operation in 10 seconds...
+ping -n 10 127.0.0.1 >nul
+shutdown -f -t 0 -r
