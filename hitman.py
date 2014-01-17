@@ -209,6 +209,32 @@ def run():
 			log("Clicked 'Next' successfully.")
 	except:
 		log("Odd exception thrown by ctrl.IsEnabled. Will need to investigate this later.")
+		
+	time.sleep(1)
+
+	# Reboot to remove leftover stuff, if option is available.
+	ctrl = window['Reboot']
+	log("Attempting to click 'reboot'...")
+	it = 0
+	try:
+		while not ctrl.IsEnabled():
+			time.sleep(1)
+			log("'Reboot' not yet enabled. Waiting...")
+			it += 1
+			# Give the reboot button 5 seconds, in case there's a countdown or similar.
+			if(it >= 5):
+				log("Timed out (" + str(it) + "s) while waiting for 'Reboot button to become ready.")
+				break
+		try:
+			# Sleep for 10 additional seconds to be sure reboot button is ready... IsEnabled() isn't that reliable...
+			time.sleep(10)
+			ctrl.Click()
+		except:
+			log("Skipping 'Reboot' button.")
+		else:
+			log("Clicked 'Reboot' successfully.")
+	except:
+		log("Could not find the completion page 'Reboot' button. HitmanPro must not be this far, or the script may be broken.")
 	
 	time.sleep(1)
 	
